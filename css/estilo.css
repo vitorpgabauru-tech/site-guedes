@@ -102,3 +102,32 @@ header h1 {
   max-width: 900px;
   margin: 0 auto 16px;
 }
+
+.painel {
+  background: var(--branco);
+  border-left: 5px solid var(--vinho);
+  border-radius: 8px;
+  padding: 28px 24px;
+  margin-top: 24px;
+  /* Sombra bem leve: separa o cartão do fundo sem chamar atenção */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.painel h3 {
+  font-size: 21px;
+  color: var(--grafite);
+}
+
+.lista {
+  padding-left: 22px;
+  margin: 16px 0 0;
+}
+
+.lista li {
+  margin-bottom: 8px;
+}
+
+/* ::marker é a bolinha da lista; aqui ela fica vinho em vez de preta */
+.lista li::marker {
+  color: var(--vinho);
+}

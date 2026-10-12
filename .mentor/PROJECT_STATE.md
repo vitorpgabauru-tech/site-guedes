@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-12
+Atualizado em: 2026-10-12 (fim do Marco 1)
 
 ---
 
@@ -27,7 +27,7 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 | Backend | nenhum no MVP |
 | Banco | nenhum |
 | Hospedagem | a definir (ver ADR-003) |
-| Repositório | a criar no GitHub |
+| Repositório | https://github.com/vitorpgabauru-tech/site-guedes (privado, branch main) |
 
 ## Ambiente
 
@@ -36,23 +36,25 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 | Sistema operacional | Windows |
 | Editor | VS Code (já instalado) |
 | Git | já instalado |
-| Pasta do projeto | C:\Projetos\site-guedes |
+| Pasta do projeto | C:\Users\User\Documents\site-guedes\site-guedes-inicio |
 | Como rodar local | abrir index.html no navegador |
 | Como testar | navegador, inclusive no modo celular (F12 > ícone de celular) |
 
 ## Onde estamos
 
-Marco atual: M1 — Preparação
-Última etapa concluída e testada: diagnóstico aprovado
-Próxima etapa: configurar Git, criar index.html e fazer o primeiro commit
+Marco atual: M2 — Conteúdo e visual
+Última etapa concluída e testada: Marco 1 fechado (estrutura, CSS base, push para o GitHub)
+Próxima etapa: topo completo com chamada principal e botão de WhatsApp
 
 ## Já funciona
 
-- nada ainda
+- index.html com as 5 seções (só títulos)
+- css/estilo.css com cores da marca, fontes Montserrat e Open Sans, base responsiva
+- código no GitHub
 
 ## Ainda não funciona
 
-- tudo
+- textos das seções, botão de WhatsApp, interatividade, formulário
 
 ## Decisões que não se reabrem
 

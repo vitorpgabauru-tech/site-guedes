@@ -63,3 +63,42 @@ footer {
   font-size: 14px;
   padding: 24px 20px;
 }
+
+header .marca {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+/* Limita a largura do subtítulo para não virar uma linha enorme em monitor grande */
+header .subtitulo {
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--vinho);
+  color: var(--branco);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+/* :hover = mouse em cima; :focus-visible = quem navega pelo teclado (Tab) também vê o destaque */
+.botao:hover,
+.botao:focus-visible {
+  background: var(--vinho-escuro);
+}
+
+/* Título com largura máxima: quebra em duas linhas equilibradas em vez de esticar de ponta a ponta */
+header h1 {
+  max-width: 900px;
+  margin: 0 auto 16px;
+}

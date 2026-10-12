@@ -29,20 +29,20 @@ Atualizado em: 2026-10-12
 
 ## Marcos
 
-### Marco 1 — Preparação
+### Marco 1 — Preparação (concluído em 2026-10-12)
 Fecha quando: index.html abre no navegador e o primeiro commit está feito.
 
-- [ ] Git configurado (nome e e-mail)
-- [ ] pasta criada, git init rodado
-- [ ] index.html com a estrutura das 5 seções
-- [ ] primeiro commit
-- [ ] repositório no GitHub criado e push feito
+- [x] Git configurado (nome e e-mail)
+- [x] pasta criada, git init rodado
+- [x] index.html com a estrutura das 5 seções
+- [x] primeiro commit
+- [x] repositório no GitHub criado e push feito
 
 ### Marco 2 — Conteúdo e visual
 Fecha quando: as 5 seções têm texto final, o visual está pronto e funciona no celular.
 
 - [ ] textos revisados (sem erros de português)
-- [ ] CSS com cores e fontes da marca
+- [x] CSS base com cores e fontes da marca
 - [ ] layout responsivo testado no modo celular
 - [ ] logo e imagens otimizadas, com texto alternativo (alt)
 

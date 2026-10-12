@@ -1,0 +1,65 @@
+/* Cores da marca num lugar só: para trocar uma cor no site inteiro, mude aqui */
+:root {
+  --vinho: #8E1B1B;
+  --vinho-escuro: #5E1414;
+  --grafite: #2B2B2B;
+  --fundo: #F7F5F2;
+  --branco: #FFFFFF;
+  --largura-max: 1100px;
+}
+
+/* Faz a largura incluir o espaçamento interno; evita conteúdo vazando para fora da tela */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--grafite);
+  background: var(--fundo);
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+/* clamp(mínimo, ideal, máximo): o título cresce com a tela, mas nunca fica pequeno demais no celular nem enorme no monitor */
+h1 { font-size: clamp(28px, 6vw, 48px); }
+h2 { font-size: clamp(24px, 4vw, 34px); color: var(--vinho); }
+
+header {
+  background: var(--grafite);
+  color: var(--branco);
+  text-align: center;
+  padding: 64px 20px;
+}
+
+header p {
+  font-size: 20px;
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* Limita a largura do texto em telas grandes e centraliza; o padding lateral protege as bordas no celular */
+section {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+
+section + section {
+  border-top: 1px solid #E2DDD8;
+}
+
+footer {
+  background: var(--vinho-escuro);
+  color: var(--branco);
+  text-align: center;
+  font-size: 14px;
+  padding: 24px 20px;
+}

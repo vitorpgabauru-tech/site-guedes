@@ -166,3 +166,43 @@ footer {
   font-size: 14px;
   padding: 24px 20px;
 }
+
+/* Botão de modo escuro/claro, no canto superior direito do topo */
+header {
+  position: relative;
+}
+
+.modo {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--borda);
+  background: var(--card);
+  color: var(--texto);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.modo:hover {
+  border-color: var(--vinho-texto);
+}
+
+.modo:focus-visible {
+  outline: 3px solid var(--vinho-texto);
+  outline-offset: 2px;
+}
+
+.modo svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* No escuro aparece o sol (para ir ao claro); no claro aparece a lua (para voltar ao escuro) */
+.claro .ic-sol,
+:root:not(.claro) .ic-lua {
+  display: none;
+}

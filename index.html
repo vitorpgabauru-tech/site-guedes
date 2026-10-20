@@ -299,8 +299,81 @@
       <h2>Quem somos</h2>
     </section>
 
+    <!-- Orçamento em etapas: uma pergunta por vez (js/site.js mostra uma e esconde as outras).
+         Ao lado, a prévia da mensagem vai se montando. No fim, o WhatsApp abre com tudo escrito.
+         Sem JavaScript, todas as perguntas aparecem juntas. -->
     <section id="orcamento">
-      <h2>Peça um orçamento</h2>
+      <p class="eyebrow">Peça um orçamento</p>
+      <h2>Responda algumas perguntas rápidas</h2>
+      <p class="secao-intro">Ao final, o WhatsApp abre com a sua mensagem pronta. É só enviar. Nada fica guardado no site.</p>
+      <div class="orc-grade">
+        <form class="form-orc" id="form-orcamento" novalidate>
+          <div class="progresso" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="passo-info" id="passo-info">Pergunta 1 de 6</p>
+
+          <!-- data-rotulo: nome do campo na mensagem. data-obrigatorio: não deixa avançar sem resposta -->
+          <fieldset class="passo" data-rotulo="Perfil" data-obrigatorio>
+            <legend class="pergunta">Você é…</legend>
+            <div class="opcoes">
+              <label class="opcao"><input type="radio" name="perfil" value="Síndico"><span>Síndico</span></label>
+              <label class="opcao"><input type="radio" name="perfil" value="Conselheiro"><span>Conselheiro</span></label>
+              <label class="opcao"><input type="radio" name="perfil" value="Morador"><span>Morador</span></label>
+              <label class="opcao"><input type="radio" name="perfil" value="Construtora"><span>Construtora</span></label>
+            </div>
+          </fieldset>
+
+          <div class="passo" data-rotulo="Nome" data-obrigatorio>
+            <label class="pergunta" for="orc-nome">Qual é o seu nome?</label>
+            <input class="campo" id="orc-nome" type="text" autocomplete="name" placeholder="Maria Souza">
+          </div>
+
+          <div class="passo" data-rotulo="Cidade" data-obrigatorio>
+            <label class="pergunta" for="orc-cidade">Em qual cidade fica o condomínio?</label>
+            <input class="campo" id="orc-cidade" type="text" autocomplete="address-level2" placeholder="Bauru">
+          </div>
+
+          <div class="passo" data-rotulo="Condomínio" data-obrigatorio>
+            <label class="pergunta" for="orc-condominio">Qual é o nome do condomínio?</label>
+            <input class="campo" id="orc-condominio" type="text" placeholder="Residencial das Flores">
+          </div>
+
+          <div class="passo" data-rotulo="Unidades">
+            <label class="pergunta" for="orc-unidades">Quantas unidades ele tem?</label>
+            <input class="campo" id="orc-unidades" type="number" inputmode="numeric" min="1" placeholder="120">
+            <p class="dica">Se não souber, pode pular.</p>
+          </div>
+
+          <div class="passo" data-rotulo="Administradora atual">
+            <label class="pergunta" for="orc-administradora">Qual é a administradora atual?</label>
+            <input class="campo" id="orc-administradora" type="text" placeholder="Nenhuma">
+            <p class="dica">Se não tiver, deixe em branco.</p>
+          </div>
+
+          <!-- Só aparece quando há itens marcados no diagnóstico -->
+          <label class="incluir-diag" id="incluir-diag" hidden>
+            <input type="checkbox" id="incluir-diag-caixa" checked>
+            <span>Incluir os <b id="qtd-diag">0</b> pontos marcados no diagnóstico</span>
+          </label>
+
+          <p class="erro" id="erro-orcamento" role="alert"></p>
+
+          <div class="botoes-orc">
+            <button type="button" class="voltar" id="orc-voltar">← Voltar</button>
+            <button type="submit" class="botao" id="orc-avancar">Continuar</button>
+            <a class="botao" id="orc-enviar" href="https://wa.me/5514998940464" target="_blank" rel="noopener" hidden>Enviar pelo WhatsApp</a>
+          </div>
+        </form>
+
+        <!-- Prévia: imitação de uma tela de WhatsApp com a mensagem que será enviada -->
+        <div class="celular">
+          <div class="celular-topo">
+            <span class="celular-foto"><img src="img/logo-icone-modo-claro.png" alt="" width="22" height="25"></span>
+            <span><b>Guedes de Azevedo</b><small>(14) 99894-0464</small></span>
+          </div>
+          <p class="balao" id="previa-orcamento"></p>
+          <p class="celular-rodape">Prévia da mensagem que será enviada</p>
+        </div>
+      </div>
     </section>
   </main>
 

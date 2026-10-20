@@ -9,8 +9,8 @@ Atualizado em: 2026-10-20
 
 ## Agora
 
-- [ ] Diagnóstico rápido (Etapa 14)
-  - Pronto quando: marcar itens muda os selos e o botão abre o WhatsApp com os pontos marcados
+- [ ] Orçamento em etapas (Etapa 15)
+  - Pronto quando: não avança sem as obrigatórias, a prévia acompanha e a mensagem chega certa num celular real
 
 ---
 
@@ -21,7 +21,6 @@ Atualizado em: 2026-10-20
 | 1 | Deixar o layout responsivo | nada vaza nem fica cortado no modo celular | 2 |
 | 2 | Seção de exemplos de trabalho (cartões sem nomes) | 3 a 4 exemplos revisados | 2 |
 | 3 | Seção quem somos | texto e credenciais revisados | 2 |
-| 4 | Formulário de orçamento -> WhatsApp | mensagem chega certa num celular real | 3 |
 | 5 | Título, descrição e alt das imagens | checklist do Marco 4 ok | 4 |
 
 ---
@@ -58,6 +57,7 @@ Atualizado em: 2026-10-20
 
 | Data | Tarefa | Commit |
 |---|---|---|
+| 2026-10-20 | diagnóstico rápido | feat: diagnóstico rápido |
 | 2026-10-20 | abas em pílulas e WhatsApp flutuante | feat: abas em pílulas |
 | 2026-10-20 | logo original e cinco frentes em cartões | feat: logo original e cinco frentes |
 | 2026-10-20 | barra de navegação fixa | feat: barra de navegação |

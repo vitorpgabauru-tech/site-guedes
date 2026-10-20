@@ -27,6 +27,7 @@
   --ok-texto: #9BD5A6;
   --atencao-bg: #3D2E12;
   --atencao-texto: #F2C66D;
+  --erro: #FF8A80;
   --largura-max: 1100px;
   /* Avisa o navegador do modo, para barras de rolagem e campos de formulário combinarem */
   color-scheme: dark;
@@ -55,6 +56,7 @@
   --ok-texto: #2F6B3A;
   --atencao-bg: #FCEFD6;
   --atencao-texto: #8A5200;
+  --erro: #B42318;
   color-scheme: light;
 }
 
@@ -902,5 +904,250 @@ header .slogan {
 
   .resultado {
     position: static;
+  }
+}
+
+/* ---------- Orçamento em etapas ---------- */
+.orc-grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 32px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+.form-orc {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  background:
+    radial-gradient(500px circle at 0% 0%, var(--brilho), transparent 55%),
+    linear-gradient(135deg, var(--card) 0%, var(--bg-alt) 100%);
+}
+
+/* Barrinhas de progresso: ficam vinho até a pergunta atual */
+.progresso {
+  display: flex;
+  gap: 6px;
+}
+
+.progresso i {
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--borda);
+  transition: background 0.3s;
+}
+
+.progresso i.feito {
+  background: var(--vinho);
+}
+
+.passo-info {
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.passo {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.pergunta {
+  display: block;
+  padding: 0;
+  margin-bottom: 14px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.campo {
+  width: 100%;
+  font: inherit;
+  font-size: 18px;
+  padding: 14px 16px;
+  border: 2px solid var(--borda);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--texto);
+}
+
+.campo:focus {
+  border-color: var(--vinho);
+  outline: none;
+}
+
+.dica {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+.opcoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 2px solid var(--borda);
+  border-radius: 12px;
+  background: var(--bg);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.opcao input {
+  accent-color: var(--vinho);
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.opcao:has(input:checked) {
+  border-color: var(--vinho);
+  background: var(--vinho-suave);
+  color: var(--vinho-suave-texto);
+}
+
+.incluir-diag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--vinho-suave);
+  color: var(--vinho-suave-texto);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.incluir-diag input {
+  accent-color: var(--vinho);
+}
+
+.erro {
+  margin: 0;
+  min-height: 1.4em;
+  font-size: 14px;
+  color: var(--erro);
+}
+
+.botoes-orc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+/* button vem com fonte e borda do navegador; ajustamos para combinar com o site */
+.botoes-orc .botao {
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.voltar {
+  background: none;
+  border: 0;
+  padding: 8px 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+
+/* Celular de mentira com a prévia (cores do WhatsApp nos dois modos) */
+.celular {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 8px solid #000000;
+  border-radius: 26px;
+  background: #ECE5DD;
+  box-shadow: 0 0 0 1px #333333, 0 20px 40px var(--sombra);
+}
+
+.celular-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -16px -16px 14px;
+  padding: 12px 14px;
+  border-radius: 16px 16px 0 0;
+  background: #075E54;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.celular-topo b,
+.celular-topo small {
+  display: block;
+}
+
+.celular-topo small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.celular-foto {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+/* pre-wrap respeita as quebras de linha da mensagem */
+.balao {
+  min-height: 140px;
+  margin: 0 0 0 24px;
+  padding: 10px 12px;
+  border-radius: 10px 0 10px 10px;
+  background: #DCF8C6;
+  color: #1F2C34;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.celular-rodape {
+  margin: 10px 0 0;
+  font-size: 12px;
+  text-align: center;
+  color: #5D6B5A;
+}
+
+@media (max-width: 960px) {
+  .orc-grade {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .form-orc {
+    padding: 20px;
+  }
+
+  .pergunta {
+    font-size: 19px;
   }
 }

@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 14)
+Atualizado em: 2026-10-20 (Etapa 15)
 
 ---
 
@@ -44,9 +44,9 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: Etapa 13, abas em pílulas + WhatsApp flutuante
-Em revisão: Etapa 14, diagnóstico rápido (#diagnostico) e botões "Fazer o diagnóstico" / WhatsApp no topo
-Próxima etapa: formulário de orçamento (#orcamento) em etapas, que também recebe os pontos do diagnóstico
+Última etapa concluída: Etapa 14, diagnóstico rápido
+Em revisão: Etapa 15, orçamento em 6 etapas com prévia da mensagem num "celular" e envio pelo WhatsApp
+Próxima etapa: seção Equipe (Vitor, Arlindo, Bruno, Silvia, Flavia), com iniciais até chegarem as fotos
 Observação: o menu da barra virou as abas em pílulas; ao criar uma seção nova, acrescentar a aba dela
 Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram
 
@@ -56,6 +56,8 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
 - topo com texto do protótipo, prédios animados, botão de WhatsApp (14) 99894-0464, slogan, curva vinho e faixa de valores
 - barra fixa com logo, sol/lua, Pedir orçamento e abas em pílulas (seção atual destacada)
 - WhatsApp flutuante com balão (balão só no computador)
+- seção #orcamento: perfil, nome, cidade, condomínio, unidades (opcional), administradora (opcional);
+  inclui os pontos do diagnóstico se houver; prévia ao vivo; nada fica guardado no site
 - seção #diagnostico: 10 situações para marcar, resultado por frente (sem sinais / atenção / prioridade)
   e botão que envia os pontos marcados pelo WhatsApp
 - seção #gestao: cinco frentes em cartões <details> (um aberto por vez), com brilho que segue o mouse

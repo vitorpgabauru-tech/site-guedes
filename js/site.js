@@ -135,3 +135,127 @@ if (botaoEnviarDiagnostico) {
   });
   atualizarDiagnostico();
 }
+
+// Orçamento em etapas.
+// Mostra uma pergunta por vez, não deixa avançar sem responder as obrigatórias
+// e vai montando a prévia da mensagem (e o link do WhatsApp) a cada letra digitada.
+const formOrcamento = document.getElementById('form-orcamento');
+
+if (formOrcamento) {
+  const passos = formOrcamento.querySelectorAll('.passo');
+  const barras = formOrcamento.querySelectorAll('.progresso i');
+  const infoPasso = document.getElementById('passo-info');
+  const erroOrcamento = document.getElementById('erro-orcamento');
+  const botaoVoltar = document.getElementById('orc-voltar');
+  const botaoAvancar = document.getElementById('orc-avancar');
+  const botaoEnviar = document.getElementById('orc-enviar');
+  const previa = document.getElementById('previa-orcamento');
+  const avisoDiagnostico = document.getElementById('incluir-diag');
+  const caixaDiagnostico = document.getElementById('incluir-diag-caixa');
+  const quantidadeDiagnostico = document.getElementById('qtd-diag');
+  let passoAtual = 0;
+
+  // Resposta de uma pergunta: a opção marcada (perfil) ou o texto digitado (demais)
+  function respostaDoPasso(passo) {
+    const marcada = passo.querySelector('input[type="radio"]:checked');
+    if (marcada) {
+      return marcada.value;
+    }
+    const campo = passo.querySelector('.campo');
+    return campo ? campo.value.trim() : '';
+  }
+
+  // Itens marcados lá na seção de diagnóstico
+  function pontosDoDiagnostico() {
+    const pontos = [];
+    caixasDiagnostico.forEach(function (caixa) {
+      if (caixa.checked) {
+        pontos.push(caixa.nextElementSibling.textContent);
+      }
+    });
+    return pontos;
+  }
+
+  function montarMensagem() {
+    const linhas = ['Olá! Vim pelo site e gostaria de um orçamento de síndico profissional.', ''];
+    passos.forEach(function (passo) {
+      const resposta = respostaDoPasso(passo);
+      if (resposta) {
+        linhas.push(passo.dataset.rotulo + ': ' + resposta);
+      }
+    });
+    const pontos = pontosDoDiagnostico();
+    if (pontos.length > 0 && caixaDiagnostico.checked) {
+      linhas.push('', 'Pontos que preocupam (diagnóstico do site):');
+      pontos.forEach(function (ponto) {
+        linhas.push('- ' + ponto);
+      });
+    }
+    return linhas.join('\n');
+  }
+
+  function atualizarPrevia() {
+    const mensagem = montarMensagem();
+    previa.textContent = mensagem;
+    botaoEnviar.href = 'https://wa.me/5514998940464?text=' + encodeURIComponent(mensagem);
+    const pontos = pontosDoDiagnostico().length;
+    avisoDiagnostico.hidden = pontos === 0;
+    quantidadeDiagnostico.textContent = pontos;
+  }
+
+  function mostrarPasso(numero) {
+    passos.forEach(function (passo, indice) {
+      passo.hidden = indice !== numero;
+    });
+    barras.forEach(function (barra, indice) {
+      barra.classList.toggle('feito', indice <= numero);
+    });
+    const opcional = !passos[numero].hasAttribute('data-obrigatorio');
+    infoPasso.textContent = 'Pergunta ' + (numero + 1) + ' de ' + passos.length + (opcional ? ' · opcional' : '');
+    // visibility (e não hidden) para o botão Continuar não "pular" de lugar
+    botaoVoltar.style.visibility = numero === 0 ? 'hidden' : 'visible';
+    const ultimo = numero === passos.length - 1;
+    botaoAvancar.hidden = ultimo;
+    botaoEnviar.hidden = !ultimo;
+    erroOrcamento.textContent = '';
+  }
+
+  // "submit" acontece ao clicar em Continuar ou apertar Enter num campo
+  formOrcamento.addEventListener('submit', function (evento) {
+    evento.preventDefault(); // impede o navegador de recarregar a página
+    const passo = passos[passoAtual];
+    if (passo.hasAttribute('data-obrigatorio') && !respostaDoPasso(passo)) {
+      erroOrcamento.textContent = 'Responda esta pergunta para continuar.';
+      return;
+    }
+    if (passoAtual < passos.length - 1) {
+      passoAtual = passoAtual + 1;
+      mostrarPasso(passoAtual);
+      const campo = passos[passoAtual].querySelector('input');
+      if (campo) {
+        campo.focus();
+      }
+    }
+  });
+
+  botaoVoltar.addEventListener('click', function () {
+    if (passoAtual > 0) {
+      passoAtual = passoAtual - 1;
+      mostrarPasso(passoAtual);
+    }
+  });
+
+  // Qualquer digitação ou escolha atualiza a prévia e apaga a mensagem de erro
+  formOrcamento.addEventListener('input', function () {
+    erroOrcamento.textContent = '';
+    atualizarPrevia();
+  });
+
+  // Marcar algo no diagnóstico também atualiza a prévia do orçamento
+  caixasDiagnostico.forEach(function (caixa) {
+    caixa.addEventListener('change', atualizarPrevia);
+  });
+
+  mostrarPasso(0);
+  atualizarPrevia();
+}

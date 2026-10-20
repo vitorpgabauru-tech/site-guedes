@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 10)
+Atualizado em: 2026-10-20 (Etapa 12)
 
 ---
 
@@ -44,16 +44,16 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: Etapa 9, topo em duas colunas com os prédios animados
-Em revisão: Etapa 10, barra de navegação fixa (logo, menu, botão de modo, "Pedir orçamento")
-Próxima etapa: seção das cinco frentes da gestão (abas), no lugar dos 2 cartões de serviço
+Última etapa concluída: Etapa 11, logo original
+Em revisão: Etapa 12, cinco frentes em cartões que abrem (estilo gorgonoid, ver ADR-005)
+Próxima etapa: barra de abas em pílulas grudada no alto + botão flutuante de WhatsApp com balão
 Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram
 
 ## Já funciona
 
 - cores do protótipo com modo escuro padrão e modo claro (botão sol/lua, escolha salva no localStorage)
 - topo com texto do protótipo, prédios animados, botão de WhatsApp (14) 99894-0464, slogan, curva vinho e faixa de valores
-- seção de serviços com 2 cartões (será trocada pelas cinco frentes do protótipo)
+- seção #gestao: cinco frentes em cartões <details> (um aberto por vez), com brilho que segue o mouse
 - demais seções só com título
 - código no GitHub
 
@@ -70,6 +70,7 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
 - Exemplos de trabalho sem nome de condomínio
 - Foco em condomínios já entregues; implantação para construtoras é seção secundária (ADR-004)
 - Visual: continuidade com o folder, modo escuro padrão com opção clara (ADR-004)
+- Interação no estilo de gorgonoid.com/links: cartões, abas em pílulas, WhatsApp flutuante (ADR-005)
 
 ## Problemas conhecidos
 
@@ -83,6 +84,8 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
   faz o commit. Se ele pedir para voltar ao modo manual: trocas como "Localizar" / "Substituir por" (Ctrl + H).
 - Comandos do Git sempre num bloco só (add, commit, push); comandos destrutivos separados.
 - WhatsApp oficial da empresa: (14) 99894-0464 (wa.me/5514998940464).
+- Logo original: OneDrive\GUEDES DE AZEVEDO - SINDICO PROFISSIONAL\MATERIAL DIVULGAÇÃO\logo.pdf
+  (o site usa recortes em img/: ícone e nome, cada um em versão para modo claro e escuro).
 - O domínio está na HostGator; quem tem acesso é o irmão (sócio). Vitor nunca cola senha no chat.
 - O e-mail da empresa (sindico@guedesdeazevedo.com.br) usa o mesmo domínio: nunca mexer em
   registros MX na publicação.

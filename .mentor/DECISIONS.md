@@ -15,6 +15,7 @@ Atualizado em: 2026-10-12
 | 002 | Formulário de orçamento via WhatsApp | aceita | 2026-10-12 |
 | 003 | Hospedagem | pendente | 2026-10-12 |
 | 004 | Posicionamento, visual e estrutura da página | aceita | 2026-10-13 |
+| 005 | Referência de interação: gorgonoid.com/links | aceita | 2026-10-20 |
 
 ---
 
@@ -133,3 +134,26 @@ Perde: mais JavaScript para o Vitor aprender e manter; a página fica mais longa
 Revisar se
 A empresa mudar de foco comercial ou a equipe mudar (atualizar a seção Equipe).
 
+---
+
+## ADR-005 — Referência de interação: gorgonoid.com/links
+
+Data: 2026-10-20
+Status: aceita (complementa a ADR-004, não substitui)
+
+Contexto
+Vitor gostou do layout e da interatividade de https://www.gorgonoid.com/links e quer algo parecido.
+
+O que foi aproveitado
+- Títulos de seção com linha pequena em vinho (eyebrow) e título grande e encorpado.
+- Cartões escuros com degradê, borda fina, cantos bem arredondados, ícone num quadrado à esquerda,
+  seta redonda à direita e brilho vinho que acompanha o mouse; leve elevação ao passar o mouse.
+- A seguir: barra de abas em "pílulas" grudada no alto que destaca a seção visível, e botão flutuante de
+  WhatsApp com balão de chamada.
+
+O que continua da ADR-004
+Identidade do folder (vinho, prédios, curva), modo escuro padrão, foco em condomínios já entregues.
+
+Consequências
+Ganha: página mais navegável e "clicável", com o conteúdo detalhado escondido até a pessoa pedir.
+Perde: mais CSS para manter; o conteúdo dentro dos cartões fecha por padrão (o Google lê mesmo assim).

@@ -9,8 +9,8 @@ Atualizado em: 2026-10-20
 
 ## Agora
 
-- [ ] Barra de navegação fixa (Etapa 10)
-  - Pronto quando: a barra fica grudada no alto ao rolar, o menu leva às seções e cabe no celular
+- [ ] Cinco frentes em cartões que abrem (Etapa 12)
+  - Pronto quando: cada cartão abre e fecha, só um fica aberto, funciona no celular e nos dois modos
 
 ---
 
@@ -31,7 +31,6 @@ Atualizado em: 2026-10-20
 | O quê | Com quem |
 |---|---|
 | Confirmar se o plano da HostGator tem cPanel | irmão |
-| Logo em boa resolução (PNG ou SVG) | Vitor |
 | Fotos individuais da equipe, mesmo fundo (Vitor, Arlindo, Bruno, Silvia, Flavia) | Vitor |
 | Fotos reais de condomínios atendidos (sem placas ou nomes) | Vitor |
 | Definir o e-mail oficial de contato (atendimento@ ou sindico@) | Vitor |
@@ -59,6 +58,8 @@ Atualizado em: 2026-10-20
 
 | Data | Tarefa | Commit |
 |---|---|---|
+| 2026-10-20 | logo original da empresa | feat: logo original |
+| 2026-10-20 | barra de navegação fixa | feat: barra de navegação |
 | 2026-10-20 | topo em duas colunas com prédios animados | feat: topo em duas colunas |
 | 2026-10-20 | topo com texto do protótipo, curva vinho e faixa de valores | 384524b |
 | 2026-10-20 | botão de modo escuro/claro com memória da escolha | feat: botão de modo |

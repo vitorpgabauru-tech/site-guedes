@@ -17,17 +17,17 @@
   <nav class="nav" aria-label="Principal">
     <div class="nav-conteudo">
       <a class="logo" href="#inicio" aria-label="Guedes de Azevedo, início">
-        <svg viewBox="0 0 40 44" aria-hidden="true">
-          <polygon points="20,2 37,11.5 37,32.5 20,42 3,32.5 3,11.5" fill="none" stroke="#B3232A" stroke-width="4"/>
-          <rect x="9" y="22" width="6" height="13" class="logo-a"/>
-          <rect x="25" y="20" width="6" height="15" class="logo-a"/>
-          <rect x="15" y="11" width="10" height="24" class="logo-b"/>
-          <g class="logo-janela"><rect x="21" y="14" width="2.5" height="1.6"/><rect x="21" y="17.5" width="2.5" height="1.6"/><rect x="21" y="21" width="2.5" height="1.6"/><rect x="21" y="24.5" width="2.5" height="1.6"/><rect x="21" y="28" width="2.5" height="1.6"/></g>
-        </svg>
-        <span><b>GUEDES DE AZEVEDO</b><small>Síndico Profissional</small></span>
+        <!-- Logo original da empresa, em duas versões: cinzas claros para o modo escuro, originais para o modo claro.
+             As classes so-escuro / so-claro mostram só a versão do modo atual -->
+        <img class="logo-icone so-escuro" src="img/logo-icone-modo-escuro.png" alt="" width="39" height="44">
+        <img class="logo-icone so-claro" src="img/logo-icone-modo-claro.png" alt="" width="39" height="44">
+        <span class="logo-texto">
+          <img class="logo-nome so-escuro" src="img/logo-nome-modo-escuro.png" alt="" width="242" height="34">
+          <img class="logo-nome so-claro" src="img/logo-nome-modo-claro.png" alt="" width="242" height="34">
+        </span>
       </a>
       <ul class="menu">
-        <li><a href="#servicos">Como ajudamos</a></li>
+        <li><a href="#gestao">Nossa gestão</a></li>
         <li><a href="#exemplos">Exemplos</a></li>
         <li><a href="#quem-somos">Equipe</a></li>
       </ul>
@@ -82,30 +82,168 @@
     </div>
   </div>
   <main>
-    <section id="servicos">
-      <h2>Como podemos ajudar</h2>
-      <div class="painel" id="painel-construtora">
-        <h3>Para construtoras: implantação de condomínios novos</h3>
-        <p>Assumimos o condomínio desde a entrega das chaves, para que ele comece organizado e a construtora tenha um único interlocutor técnico.</p>
-        <ul class="lista">
-          <li>Assembleia de instalação, eleição e posse</li>
-          <li>Abertura de CNPJ e conta bancária, contratação de administradora, funcionários e fornecedores</li>
-          <li>Vistoria técnica de recebimento das áreas comuns, feita por engenheiro civil</li>
-          <li>Registro e acompanhamento dos chamados de assistência técnica e garantias</li>
-          <li>Primeira previsão orçamentária e regimento interno</li>
-        </ul>
-      </div>
-
-      <div class="painel" id="painel-condominio">
-        <h3>Para condomínios em funcionamento</h3>
-        <p>Cuidamos do dia a dia para que os moradores não precisem: manutenção, contas, assembleias e convivência, com prestação de contas clara.</p>
-        <ul class="lista">
-          <li>Manutenção preventiva e corretiva com acompanhamento técnico</li>
-          <li>Previsão orçamentária, prestação de contas e acompanhamento da inadimplência</li>
-          <li>Convocação, condução e ata de assembleias</li>
-          <li>Análise de seguro e coberturas do condomínio</li>
-          <li>Aplicação do regimento interno, notificações e multas</li>
-        </ul>
+    <!-- Cinco frentes da gestão. Cada cartão é um <details>: abre e fecha sozinho, sem JavaScript.
+         O name="frentes" faz abrir um de cada vez (ao abrir outro, o anterior fecha) -->
+    <section id="gestao">
+      <p class="eyebrow">Nossa gestão</p>
+      <h2>Cinco frentes, uma equipe cuidando de cada uma</h2>
+      <p class="secao-intro">Toque em cada frente para ver os sinais de alerta, o que fazemos e o que o condomínio recebe.</p>
+      <div class="frentes">
+        <details class="cartao" name="frentes" id="frente-financeiro">
+          <summary>
+            <span class="cartao-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></g></svg></span>
+            <span class="cartao-texto"><strong>Controle e transparência financeira</strong><span>Contas claras todo mês</span></span>
+            <span class="cartao-seta" aria-hidden="true">›</span>
+          </summary>
+          <div class="cartao-corpo">
+            <p class="cartao-lead">O morador precisa entender para onde vai o dinheiro, e o condomínio precisa de caixa para não viver de taxa extra.</p>
+            <div class="cartao-colunas">
+              <div>
+                <h4>Sinais de alerta</h4>
+                <ul class="lista">
+              <li>Balancete que ninguém entende ou chega atrasado</li>
+              <li>Inadimplência crescendo sem cobrança</li>
+              <li>Taxa extra para cobrir o básico</li>
+                </ul>
+              </div>
+              <div>
+                <h4>O que fazemos</h4>
+                <ul class="lista">
+              <li>Balancete mensal revisado e auditado por contadora independente</li>
+              <li>Previsto e realizado lado a lado</li>
+              <li>Cobrança organizada da inadimplência</li>
+              <li>No mínimo três orçamentos antes de cada compra</li>
+              <li>Previsão orçamentária anual com memória de cálculo</li>
+                </ul>
+              </div>
+            </div>
+            <p class="cartao-entrega"><strong>Prestação de contas mensal.</strong> Resultados divulgados periodicamente no mural virtual do condomínio.</p>
+          </div>
+        </details>
+        <details class="cartao" name="frentes" id="frente-seguranca">
+          <summary>
+            <span class="cartao-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4" stroke-linecap="round"/></g></svg></span>
+            <span class="cartao-texto"><strong>Segurança patrimonial moderna</strong><span>Acesso controlado de verdade</span></span>
+            <span class="cartao-seta" aria-hidden="true">›</span>
+          </summary>
+          <div class="cartao-corpo">
+            <p class="cartao-lead">Segurança eficaz é tecnologia certa com procedimento cumprido. Um sem o outro não protege ninguém.</p>
+            <div class="cartao-colunas">
+              <div>
+                <h4>Sinais de alerta</h4>
+                <ul class="lista">
+              <li>Visitantes e prestadores entram sem registro</li>
+              <li>Câmeras que não gravam ou que ninguém consulta</li>
+              <li>Entregas sem regra e portões abertos</li>
+                </ul>
+              </div>
+              <div>
+                <h4>O que fazemos</h4>
+                <ul class="lista">
+              <li>Fiscalização periódica dos itens de segurança</li>
+              <li>Avaliação do controle de acesso e da portaria</li>
+              <li>Revisão das câmeras, gravação e cobertura</li>
+              <li>Procedimentos para visitantes, prestadores e entregas</li>
+              <li>Orientação da equipe de portaria</li>
+                </ul>
+              </div>
+            </div>
+            <p class="cartao-entrega"><strong>Propostas de melhoria.</strong> Soluções de segurança com custo, para discussão e aprovação em assembleia.</p>
+          </div>
+        </details>
+        <details class="cartao" name="frentes" id="frente-regras">
+          <summary>
+            <span class="cartao-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></g></svg></span>
+            <span class="cartao-texto"><strong>Cumprimento real das regras</strong><span>Regimento que vale para todos</span></span>
+            <span class="cartao-seta" aria-hidden="true">›</span>
+          </summary>
+          <div class="cartao-corpo">
+            <p class="cartao-lead">Regra que só existe no papel gera conflito entre vizinhos. Aplicamos as regras de forma impessoal, e a orientação vem antes da punição.</p>
+            <div class="cartao-colunas">
+              <div>
+                <h4>Sinais de alerta</h4>
+                <ul class="lista">
+              <li>As mesmas reclamações se repetem há meses</li>
+              <li>Regras que valem para uns e não para outros</li>
+              <li>Multas aplicadas sem critério ou sem registro</li>
+                </ul>
+              </div>
+              <div>
+                <h4>O que fazemos</h4>
+                <ul class="lista">
+              <li>Orientação antes de qualquer punição</li>
+              <li>Notificação por escrito, com prazo de defesa</li>
+              <li>Multas conforme a convenção e o regimento</li>
+              <li>Registro de cada ocorrência</li>
+              <li>Campanhas educativas para os moradores</li>
+                </ul>
+              </div>
+            </div>
+            <p class="cartao-entrega"><strong>Notificações e registro de ocorrências.</strong> Cada caso documentado, do aviso à decisão.</p>
+          </div>
+        </details>
+        <details class="cartao" name="frentes" id="frente-valorizacao">
+          <summary>
+            <span class="cartao-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 16l2-2 2 1 3-3"/></g></svg></span>
+            <span class="cartao-texto"><strong>Valorização do imóvel</strong><span>Patrimônio que não perde valor</span></span>
+            <span class="cartao-seta" aria-hidden="true">›</span>
+          </summary>
+          <div class="cartao-corpo">
+            <p class="cartao-lead">Um condomínio bem cuidado, atualizado e com documentação regular vende e aluga melhor.</p>
+            <div class="cartao-colunas">
+              <div>
+                <h4>Sinais de alerta</h4>
+                <ul class="lista">
+              <li>Áreas comuns com aparência de abandono</li>
+              <li>Melhorias decididas sem planejamento</li>
+              <li>Documentação vencida que trava vendas e financiamentos</li>
+                </ul>
+              </div>
+              <div>
+                <h4>O que fazemos</h4>
+                <ul class="lista">
+              <li>Planejamento de investimentos para valorização</li>
+              <li>Novas tecnologias e redução de custos</li>
+              <li>Conservação das áreas comuns e fachada</li>
+              <li>Documentação e laudos regulares</li>
+              <li>Seguro do condomínio com coberturas revisadas</li>
+                </ul>
+              </div>
+            </div>
+            <p class="cartao-entrega"><strong>Plano de melhorias.</strong> O que fazer, em que ordem e quanto custa, para aprovar em assembleia.</p>
+          </div>
+        </details>
+        <details class="cartao" name="frentes" id="frente-manutencao">
+          <summary>
+            <span class="cartao-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></g></svg></span>
+            <span class="cartao-texto"><strong>Manutenção e funcionamento pleno</strong><span>Tudo funcionando, sem surpresa</span></span>
+            <span class="cartao-seta" aria-hidden="true">›</span>
+          </summary>
+          <div class="cartao-corpo">
+            <p class="cartao-lead">Manutenção preventiva custa menos que conserto de emergência. Aqui ela é acompanhada por engenheiros civis.</p>
+            <div class="cartao-colunas">
+              <div>
+                <h4>Sinais de alerta</h4>
+                <ul class="lista">
+              <li>Só se mexe quando algo quebra</li>
+              <li>Elevador, bomba ou portão parados com frequência</li>
+              <li>Ninguém sabe a validade do AVCB e dos laudos</li>
+                </ul>
+              </div>
+              <div>
+                <h4>O que fazemos</h4>
+                <ul class="lista">
+              <li>Monitoramento contínuo das manutenções preventivas</li>
+              <li>Atuação rápida nas demandas corretivas</li>
+              <li>Gestão dos contratos (elevadores, portões, bombas)</li>
+              <li>Acompanhamento técnico e registro em software próprio</li>
+              <li>Vistorias periódicas das áreas técnicas</li>
+                </ul>
+              </div>
+            </div>
+            <p class="cartao-entrega"><strong>Calendário de manutenção.</strong> Cada sistema do prédio com data, responsável e situação.</p>
+          </div>
+        </details>
       </div>
     </section>
 

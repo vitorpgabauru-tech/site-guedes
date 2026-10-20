@@ -25,3 +25,14 @@ if (botaoModo) {
 
   atualizarRotulo();
 }
+
+// Brilho que segue o mouse nos cartões das cinco frentes.
+// A cada movimento, guardamos a posição do mouse (em relação ao cartão) nas variáveis --mx e --my;
+// o CSS usa essas variáveis para posicionar o brilho vinho do fundo.
+document.querySelectorAll('.cartao').forEach(function (cartao) {
+  cartao.addEventListener('pointermove', function (evento) {
+    const caixa = cartao.getBoundingClientRect();
+    cartao.style.setProperty('--mx', (evento.clientX - caixa.left) + 'px');
+    cartao.style.setProperty('--my', (evento.clientY - caixa.top) + 'px');
+  });
+});

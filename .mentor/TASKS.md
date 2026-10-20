@@ -9,8 +9,8 @@ Atualizado em: 2026-10-20
 
 ## Agora
 
-- [ ] Nova ordem, prédios em foto e equipe (Etapa 16)
-  - Pronto quando: diagnóstico e orçamento em sequência; prédios animados; equipe com fotos/iniciais
+- [ ] Rodapé completo e Exemplos escondido (Etapa 17)
+  - Pronto quando: rodapé com contato e endereço clicáveis; nenhuma seção vazia aparece
 
 ---
 
@@ -33,7 +33,7 @@ Atualizado em: 2026-10-20
 | Fotos de Arlindo, Bruno e Flavia (Vitor e Silvia já estão no site) | Vitor |
 | Conferir a licença das imagens de prédios (_fotos_tmp) antes de publicar | Vitor |
 | Fotos reais de condomínios atendidos (sem placas ou nomes) | Vitor |
-| Definir o e-mail oficial de contato (atendimento@ ou sindico@) | Vitor |
+| Reunir 3 ou 4 exemplos de trabalho (sem nome de condomínio) | Vitor |
 
 ---
 
@@ -58,6 +58,7 @@ Atualizado em: 2026-10-20
 
 | Data | Tarefa | Commit |
 |---|---|---|
+| 2026-10-20 | nova ordem, prédios em foto e equipe | feat: nova ordem das seções |
 | 2026-10-20 | orçamento em etapas | feat: orçamento em etapas |
 | 2026-10-20 | diagnóstico rápido | feat: diagnóstico rápido |
 | 2026-10-20 | abas em pílulas e WhatsApp flutuante | feat: abas em pílulas |

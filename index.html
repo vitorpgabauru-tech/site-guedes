@@ -40,7 +40,7 @@
         <li><a class="aba" href="#gestao">Nossa gestão</a></li>
         <li><a class="aba" href="#diagnostico">Diagnóstico</a></li>
         <li><a class="aba" href="#orcamento">Orçamento</a></li>
-        <li><a class="aba" href="#exemplos">Exemplos</a></li>
+        <li hidden><a class="aba" href="#exemplos">Exemplos</a></li>
         <li><a class="aba" href="#quem-somos">Equipe</a></li>
       </ul>
     </div>
@@ -366,7 +366,8 @@
       </div>
     </section>
 
-    <section id="exemplos">
+    <!-- EM ESPERA: Vitor está reunindo os exemplos. Para mostrar a seção, apague o "hidden" daqui e da aba "Exemplos" -->
+    <section id="exemplos" hidden>
       <h2>Exemplos do nosso trabalho</h2>
     </section>
 
@@ -453,8 +454,31 @@
 
   </main>
 
+  <!-- Rodapé: fundo vinho escuro nos dois modos, por isso usa sempre o logo de letras claras -->
   <footer>
-    <p>Guedes de Azevedo Síndico Profissional · Bauru/SP</p>
+    <div class="rodape-grade">
+      <div class="rodape-marca">
+        <img src="img/logo-icone-modo-escuro.png" alt="" width="39" height="44">
+        <img src="img/logo-nome-modo-escuro.png" alt="Guedes de Azevedo Síndico Profissional" width="242" height="34">
+        <p>"O seu bem em boas mãos."</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul class="rodape-lista">
+          <li><a href="https://wa.me/5514998940464" target="_blank" rel="noopener">WhatsApp (14) 99894-0464</a></li>
+          <li><a href="tel:+551432430464">Telefone (14) 3243-0464</a></li>
+          <li><a href="mailto:sindico@guedesdeazevedo.com.br">sindico@guedesdeazevedo.com.br</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <address>
+          Rua Azarias Leite, 18-45, sala 1<br>
+          Jardim Estoril, Bauru/SP
+        </address>
+      </div>
+    </div>
+    <p class="rodape-fim">© 2026 Guedes de Azevedo Síndico Profissional · Bauru e Marília · desde 2016</p>
   </footer>
 
   <!-- Botão flutuante de WhatsApp: fica sempre no canto da tela. O balão aparece depois de alguns segundos -->

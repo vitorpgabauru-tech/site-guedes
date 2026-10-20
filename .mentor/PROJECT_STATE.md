@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 16)
+Atualizado em: 2026-10-20 (Etapa 17)
 
 ---
 
@@ -44,10 +44,10 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: Etapa 15, orçamento em etapas
-Em revisão: Etapa 16, nova ordem (gestão, diagnóstico, orçamento, exemplos, equipe), prédios em foto com
-paralaxe no topo e seção Equipe (fotos de Vitor e Silvia; iniciais para Arlindo, Bruno e Flavia)
-Próxima etapa: seção Exemplos do nosso trabalho (cartões sem nome de condomínio) e rodapé completo
+Última etapa concluída: Etapa 16, nova ordem, prédios em foto e equipe
+Em revisão: Etapa 17, rodapé completo e seção Exemplos escondida (hidden) até chegarem os casos
+Próximas etapas: seção para construtoras (secundária) → vistoria interativa → revisão final → publicação
+Em espera: Exemplos do nosso trabalho (Vitor está reunindo 3 ou 4 casos: tipo, tamanho, cidade, problema, solução)
 Observação: o menu da barra virou as abas em pílulas; ao criar uma seção nova, acrescentar a aba dela
 Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram
 
@@ -93,7 +93,9 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
   com o computador) e testa antes; Vitor revisa no Source Control (Ctrl + Shift + G), testa no navegador e
   faz o commit. Se ele pedir para voltar ao modo manual: trocas como "Localizar" / "Substituir por" (Ctrl + H).
 - Comandos do Git sempre num bloco só (add, commit, push); comandos destrutivos separados.
-- WhatsApp oficial da empresa: (14) 99894-0464 (wa.me/5514998940464).
+- WhatsApp oficial da empresa: (14) 99894-0464 (wa.me/5514998940464). Fixo: (14) 3243-0464.
+- E-mail oficial de contato no site: sindico@guedesdeazevedo.com.br (decidido em 2026-10-20).
+- Endereço: Rua Azarias Leite, 18-45, sala 1, Jardim Estoril, Bauru/SP.
 - Logo original: OneDrive\GUEDES DE AZEVEDO - SINDICO PROFISSIONAL\MATERIAL DIVULGAÇÃO\logo.pdf
   (o site usa recortes em img/: ícone e nome, cada um em versão para modo claro e escuro).
 - O domínio está na HostGator; quem tem acesso é o irmão (sócio). Vitor nunca cola senha no chat.

@@ -172,9 +172,79 @@ section + section {
 footer {
   background: var(--rodape);
   color: #FFFFFF;
-  text-align: center;
-  font-size: 14px;
-  padding: 24px 20px;
+  font-size: 15px;
+  padding: 48px 20px 24px;
+}
+
+/* Três colunas no computador: marca, contato, endereço */
+.rodape-grade {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+}
+
+.rodape-marca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.rodape-marca p {
+  flex-basis: 100%;
+  margin: 8px 0 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+footer h3 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.rodape-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* address vem em itálico do navegador; tiramos */
+footer address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.rodape-fim {
+  max-width: 1140px;
+  margin: 32px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+@media (max-width: 760px) {
+  .rodape-grade {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
 }
 
 /* O topo precisa de position: relative para a curva (position: absolute) se posicionar em relação a ele */

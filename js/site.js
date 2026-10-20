@@ -275,3 +275,54 @@ if (topo && skyline && window.matchMedia('(hover: hover)').matches) {
     skyline.style.setProperty('--px', 0);
   });
 }
+
+// Botão "Falar sobre implantação": além de rolar até o orçamento (pelo href="#orcamento"),
+// já marca "Construtora" na primeira pergunta e atualiza a prévia da mensagem.
+const botaoConstrutora = document.getElementById('sou-construtora');
+const opcaoConstrutora = document.querySelector('input[name="perfil"][value="Construtora"]');
+
+if (botaoConstrutora && opcaoConstrutora) {
+  botaoConstrutora.addEventListener('click', function () {
+    opcaoConstrutora.checked = true;
+    // Avisa o formulário que algo mudou, como se a pessoa tivesse clicado (atualiza a prévia)
+    opcaoConstrutora.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+}
+
+// Vistoria interativa: clicar num ponto do prédio mostra a ficha dele e esconde as outras.
+// Os botões "Anterior" e "Próximo" andam em círculo (do último volta para o primeiro).
+const pontosVistoria = document.querySelectorAll('.ponto');
+const fichasVistoria = document.querySelectorAll('.ficha');
+const navegacaoFicha = document.querySelector('.nav-ficha');
+let pontoAtual = 1;
+
+function mostrarPonto(numero) {
+  pontoAtual = numero;
+  fichasVistoria.forEach(function (ficha) {
+    ficha.hidden = ficha.id !== 'ponto-' + numero;
+  });
+  pontosVistoria.forEach(function (ponto) {
+    ponto.setAttribute('aria-pressed', ponto.dataset.ponto === String(numero));
+  });
+}
+
+if (pontosVistoria.length && navegacaoFicha) {
+  navegacaoFicha.hidden = false;
+  const total = fichasVistoria.length;
+
+  pontosVistoria.forEach(function (ponto) {
+    ponto.addEventListener('click', function () {
+      mostrarPonto(Number(ponto.dataset.ponto));
+    });
+  });
+
+  // % (resto da divisão) faz a volta: depois do 6 vem o 1, antes do 1 vem o 6
+  document.getElementById('ficha-proxima').addEventListener('click', function () {
+    mostrarPonto((pontoAtual % total) + 1);
+  });
+  document.getElementById('ficha-anterior').addEventListener('click', function () {
+    mostrarPonto(((pontoAtual + total - 2) % total) + 1);
+  });
+
+  mostrarPonto(1);
+}

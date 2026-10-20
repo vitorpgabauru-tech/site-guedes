@@ -1353,3 +1353,237 @@ header .slogan {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* ---------- Construtoras ---------- */
+.construtoras {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 36px;
+  align-items: center;
+  padding: 36px;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  background:
+    radial-gradient(500px circle at 100% 100%, var(--brilho), transparent 55%),
+    linear-gradient(135deg, var(--card) 0%, var(--bg-alt) 100%);
+}
+
+.construtoras .secao-intro {
+  margin-bottom: 20px;
+}
+
+/* Lista com "visto" vinho no lugar da bolinha, em duas colunas */
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 20px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.checklist svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  margin-top: 2px;
+  color: var(--vinho-texto);
+}
+
+@media (max-width: 960px) {
+  .construtoras {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .checklist {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Vistoria interativa ---------- */
+.vistoria {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+/* Prancheta: "papel" claro nos dois modos, como um desenho técnico */
+.prancheta {
+  padding: 18px;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  background: #F1EFEC;
+}
+
+/* A planta é o "quadro" onde os pontos são posicionados por cima do desenho (left/top em %) */
+.planta {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 420 / 500;
+  margin: 0 auto;
+}
+
+.planta svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* translate(-50%, -50%) centraliza o círculo exatamente no ponto marcado */
+.ponto {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  transform: translate(-50%, -50%);
+  border: 3px solid #FFFFFF;
+  border-radius: 50%;
+  background: #A3191E;
+  color: #FFFFFF;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, background 0.2s;
+}
+
+/* Anel que "pulsa" em volta dos pontos ainda não escolhidos, para chamar o clique */
+.ponto::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border: 2px solid #A3191E;
+  border-radius: 50%;
+  opacity: 0;
+  animation: pulsa 2.2s infinite;
+}
+
+.ponto:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.ponto[aria-pressed="true"] {
+  background: #2B2B2B;
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.ponto[aria-pressed="true"]::after {
+  animation: none;
+}
+
+.ponto:focus-visible {
+  outline: 3px solid #2B2B2B;
+  outline-offset: 3px;
+}
+
+@keyframes pulsa {
+  0% { transform: scale(0.7); opacity: 0.8; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+.legenda {
+  margin: 8px 0 0;
+  font-size: 13px;
+  text-align: center;
+  color: #6B6762;
+}
+
+.fichas {
+  display: grid;
+  gap: 16px;
+}
+
+.ficha {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  min-height: 340px;
+  padding: 28px;
+  border: 1px solid var(--borda);
+  border-top: 5px solid var(--vinho);
+  border-radius: 18px;
+  background:
+    radial-gradient(500px circle at 100% 0%, var(--brilho), transparent 55%),
+    linear-gradient(135deg, var(--card) 0%, var(--bg-alt) 100%);
+}
+
+.ficha h3,
+.ficha h4,
+.ficha .lista,
+.ficha p {
+  margin: 0;
+}
+
+.ficha-num {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--vinho-texto);
+}
+
+.ficha h3 {
+  font-size: 24px;
+}
+
+.ficha h4 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.porque {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--vinho-suave);
+  color: var(--vinho-suave-texto);
+  font-size: 15px;
+}
+
+.nav-ficha {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-ficha button {
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--vinho-texto);
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .vistoria {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ficha {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ponto::after {
+    animation: none;
+  }
+}

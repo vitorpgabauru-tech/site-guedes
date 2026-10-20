@@ -38,10 +38,12 @@
     <div class="abas-faixa">
       <ul class="abas">
         <li><a class="aba" href="#gestao">Nossa gestão</a></li>
+        <li><a class="aba" href="#vistoria">Vistoria</a></li>
         <li><a class="aba" href="#diagnostico">Diagnóstico</a></li>
         <li><a class="aba" href="#orcamento">Orçamento</a></li>
         <li hidden><a class="aba" href="#exemplos">Exemplos</a></li>
         <li><a class="aba" href="#quem-somos">Equipe</a></li>
+        <li><a class="aba" href="#construtoras">Construtoras</a></li>
       </ul>
     </div>
   </nav>
@@ -253,6 +255,124 @@
       </div>
     </section>
 
+    <!-- Vistoria interativa: desenho de um prédio em corte com 6 pontos clicáveis.
+         Cada ponto mostra a sua ficha (js/site.js mostra uma e esconde as outras; sem JavaScript, todas aparecem) -->
+    <section id="vistoria">
+      <p class="eyebrow">Manutenção com olhar de engenheiro</p>
+      <h2>O que um engenheiro civil olha no seu condomínio</h2>
+      <p class="secao-intro">Toque nos pontos do prédio para ver o que verificamos em cada parte. Esse é o nosso diferencial na manutenção.</p>
+      <div class="vistoria">
+        <div class="prancheta">
+          <div class="planta">
+          <svg viewBox="0 0 420 500" role="img" aria-label="Corte de um prédio residencial com seis pontos de vistoria marcados">
+            <rect x="0" y="430" width="420" height="70" fill="#D8D4CF"/>
+            <rect x="60" y="430" width="300" height="62" fill="#C4BFB9"/>
+            <rect x="85" y="452" width="56" height="24" rx="6" fill="#8D8882"/><rect x="160" y="452" width="56" height="24" rx="6" fill="#8D8882"/>
+            <rect x="300" y="456" width="34" height="22" fill="#6E6A65"/><circle cx="317" cy="467" r="6" fill="#C4BFB9"/>
+            <line x1="0" y1="430" x2="420" y2="430" stroke="#6E6A65" stroke-width="3"/>
+            <rect x="80" y="110" width="260" height="320" fill="#FFFFFF" stroke="#6E6A65" stroke-width="3"/>
+            <g fill="#DCE3E8" stroke="#9BA6AD" stroke-width="1.5">
+              <rect x="100" y="130" width="40" height="34"/><rect x="160" y="130" width="40" height="34"/><rect x="220" y="130" width="40" height="34"/><rect x="280" y="130" width="40" height="34"/>
+              <rect x="100" y="182" width="40" height="34"/><rect x="160" y="182" width="40" height="34"/><rect x="220" y="182" width="40" height="34"/><rect x="280" y="182" width="40" height="34"/>
+              <rect x="100" y="234" width="40" height="34"/><rect x="160" y="234" width="40" height="34"/><rect x="220" y="234" width="40" height="34"/><rect x="280" y="234" width="40" height="34"/>
+              <rect x="100" y="286" width="40" height="34"/><rect x="160" y="286" width="40" height="34"/><rect x="220" y="286" width="40" height="34"/><rect x="280" y="286" width="40" height="34"/>
+            </g>
+            <line x1="80" y1="340" x2="340" y2="340" stroke="#C9C5C0" stroke-width="2"/>
+            <rect x="180" y="362" width="60" height="68" fill="#9BA6AD"/>
+            <rect x="286" y="372" width="30" height="40" fill="#A3191E"/><rect x="292" y="380" width="18" height="18" fill="#FFFFFF"/>
+            <rect x="70" y="98" width="280" height="14" fill="#6E6A65"/>
+            <rect x="210" y="52" width="100" height="46" fill="#B9B4AE" stroke="#6E6A65" stroke-width="2"/>
+            <line x1="120" y1="98" x2="120" y2="20" stroke="#6E6A65" stroke-width="3"/><polygon points="120,10 114,24 126,24" fill="#6E6A65"/>
+          </svg>
+            <button class="ponto" type="button" style="left: 66%; top: 16%" data-ponto="1" aria-label="Reservatórios e bombas">1</button>
+            <button class="ponto" type="button" style="left: 44%; top: 21%" data-ponto="2" aria-label="Cobertura e impermeabilização">2</button>
+            <button class="ponto" type="button" style="left: 28.5%; top: 5%" data-ponto="3" aria-label="Para-raios (SPDA)">3</button>
+            <button class="ponto" type="button" style="left: 19%; top: 44%" data-ponto="4" aria-label="Fachada">4</button>
+            <button class="ponto" type="button" style="left: 72%; top: 78%" data-ponto="5" aria-label="Prevenção de incêndio">5</button>
+            <button class="ponto" type="button" style="left: 46%; top: 93%" data-ponto="6" aria-label="Garagem e subsolo">6</button>
+          </div>
+          <p class="legenda">Desenho ilustrativo. Cada condomínio tem sua lista própria de itens.</p>
+        </div>
+        <div class="fichas" aria-live="polite">
+        <article class="ficha" id="ponto-1">
+          <p class="ficha-num">Ponto 1 de 6</p>
+          <h3>Reservatórios e bombas</h3>
+          <h4>O que verificamos</h4>
+          <ul class="lista">
+            <li>Limpeza e desinfecção periódica da caixa d'água</li>
+            <li>Tampas, boias e extravasores</li>
+            <li>Bombas de recalque funcionando em revezamento</li>
+            <li>Vazamentos e estanqueidade</li>
+          </ul>
+          <p class="porque"><strong>Por que importa:</strong> Água é o item que mais gera reclamação e risco à saúde. Bomba parada costuma ser descoberta só quando falta água.</p>
+        </article>
+        <article class="ficha" id="ponto-2">
+          <p class="ficha-num">Ponto 2 de 6</p>
+          <h3>Cobertura e impermeabilização</h3>
+          <h4>O que verificamos</h4>
+          <ul class="lista">
+            <li>Manta e proteção mecânica da laje</li>
+            <li>Calhas, rufos e ralos desobstruídos</li>
+            <li>Sinais de infiltração no último andar</li>
+            <li>Escoamento da água da chuva</li>
+          </ul>
+          <p class="porque"><strong>Por que importa:</strong> Infiltração começa pequena e vira obra cara. Identificar cedo permite reparo localizado.</p>
+        </article>
+        <article class="ficha" id="ponto-3">
+          <p class="ficha-num">Ponto 3 de 6</p>
+          <h3>Para-raios (SPDA)</h3>
+          <h4>O que verificamos</h4>
+          <ul class="lista">
+            <li>Captores e cabos de descida</li>
+            <li>Conexões e pontos de corrosão</li>
+            <li>Laudo e medição do aterramento em dia</li>
+          </ul>
+          <p class="porque"><strong>Por que importa:</strong> É item de segurança obrigatório e costuma ser exigido pela seguradora e pelo Corpo de Bombeiros.</p>
+        </article>
+        <article class="ficha" id="ponto-4">
+          <p class="ficha-num">Ponto 4 de 6</p>
+          <h3>Fachada</h3>
+          <h4>O que verificamos</h4>
+          <ul class="lista">
+            <li>Fissuras e trincas</li>
+            <li>Revestimento solto ou com som cavo</li>
+            <li>Juntas de dilatação e rejuntes</li>
+            <li>Vedação das janelas</li>
+          </ul>
+          <p class="porque"><strong>Por que importa:</strong> Peça solta de fachada é risco para quem passa embaixo. Identificar cedo evita reforma geral.</p>
+        </article>
+        <article class="ficha" id="ponto-5">
+          <p class="ficha-num">Ponto 5 de 6</p>
+          <h3>Prevenção de incêndio</h3>
+          <h4>O que verificamos</h4>
+          <ul class="lista">
+            <li>Validade e recarga dos extintores</li>
+            <li>Hidrantes, mangueiras e bomba de incêndio</li>
+            <li>Iluminação de emergência e sinalização</li>
+            <li>AVCB do Corpo de Bombeiros válido</li>
+          </ul>
+          <p class="porque"><strong>Por que importa:</strong> Sem AVCB válido o condomínio pode ter problema com o seguro e responde pelo risco aos moradores.</p>
+        </article>
+        <article class="ficha" id="ponto-6">
+          <p class="ficha-num">Ponto 6 de 6</p>
+          <h3>Garagem e subsolo</h3>
+          <h4>O que verificamos</h4>
+          <ul class="lista">
+            <li>Ralos, drenagem e bombas de esgotamento</li>
+            <li>Piso, demarcação e sinalização</li>
+            <li>Portões automáticos e iluminação</li>
+            <li>Infiltrações nas paredes de contenção</li>
+          </ul>
+          <p class="porque"><strong>Por que importa:</strong> Subsolo alagado danifica carros e equipamentos. A bomba de drenagem precisa estar testada antes da época de chuva.</p>
+        </article>
+          <div class="nav-ficha" hidden>
+            <button type="button" id="ficha-anterior">← Anterior</button>
+            <button type="button" id="ficha-proxima">Próximo →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Diagnóstico rápido: a pessoa marca o que acontece no condomínio e o resultado (ao lado) mostra
          onde agir primeiro. O botão monta uma mensagem de WhatsApp com os pontos marcados (js/site.js) -->
     <section id="diagnostico">
@@ -452,6 +572,26 @@
       </div>
     </section>
 
+    <!-- Construtoras: seção secundária (o foco do site são condomínios já entregues, ADR-004).
+         O botão leva ao orçamento já com "Construtora" escolhido (js/site.js) -->
+    <section id="construtoras">
+      <div class="construtoras">
+        <div>
+          <p class="eyebrow">Para construtoras</p>
+          <h2>Vai entregar um empreendimento?</h2>
+          <p class="secao-intro">Também implantamos condomínios novos desde a entrega das chaves, para que o condomínio comece organizado e a construtora tenha um único interlocutor técnico.</p>
+          <a class="botao botao-contorno" id="sou-construtora" href="#orcamento">Falar sobre implantação</a>
+        </div>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Assembleia de instalação, eleição e posse</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>CNPJ, conta bancária e administradora</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Contratação de funcionários e fornecedores</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Vistoria de recebimento das áreas comuns</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Acompanhamento dos chamados de garantia</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Primeira previsão orçamentária e regimento</li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <!-- Rodapé: fundo vinho escuro nos dois modos, por isso usa sempre o logo de letras claras -->

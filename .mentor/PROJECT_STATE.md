@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 17)
+Atualizado em: 2026-10-20 (Etapa 19)
 
 ---
 
@@ -44,9 +44,10 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: Etapa 16, nova ordem, prédios em foto e equipe
-Em revisão: Etapa 17, rodapé completo e seção Exemplos escondida (hidden) até chegarem os casos
-Próximas etapas: seção para construtoras (secundária) → vistoria interativa → revisão final → publicação
+Última etapa concluída: Etapa 17, rodapé completo e Exemplos em espera
+Em revisão: Etapa 18 (Construtoras) + Etapa 19: vistoria interativa (#vistoria, depois de Nossa gestão)
+e prédios do topo com janelas e varandas sólidas (recorte refeito)
+Próximas etapas: revisão final (textos, título/descrição, imagem de compartilhamento, celular real) → publicação
 Em espera: Exemplos do nosso trabalho (Vitor está reunindo 3 ou 4 casos: tipo, tamanho, cidade, problema, solução)
 Observação: o menu da barra virou as abas em pílulas; ao criar uma seção nova, acrescentar a aba dela
 Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram
@@ -58,6 +59,8 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
 - barra fixa com logo, sol/lua, Pedir orçamento e abas em pílulas (seção atual destacada)
 - WhatsApp flutuante com balão (balão só no computador)
 - topo: 5 prédios em foto (img/predio-1..5.webp, fundo recortado de _fotos_tmp) sobem ao abrir e se mexem com o mouse
+- seção #vistoria: prédio em corte com 6 pontos clicáveis e ficha de cada um (anterior/próximo)
+- seção #construtoras: checklist da implantação; botão leva ao orçamento com "Construtora" marcado
 - seção #quem-somos: equipe com credenciais e 5 cartões
 - seção #orcamento: perfil, nome, cidade, condomínio, unidades (opcional), administradora (opcional);
   inclui os pontos do diagnóstico se houver; prévia ao vivo; nada fica guardado no site

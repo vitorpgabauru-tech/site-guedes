@@ -9,8 +9,8 @@ Atualizado em: 2026-10-20
 
 ## Agora
 
-- [ ] Rodapé completo e Exemplos escondido (Etapa 17)
-  - Pronto quando: rodapé com contato e endereço clicáveis; nenhuma seção vazia aparece
+- [ ] Construtoras + vistoria interativa + prédios sólidos (Etapas 18 e 19)
+  - Pronto quando: pontos mostram a ficha certa; prédios sem partes transparentes
 
 ---
 
@@ -31,7 +31,7 @@ Atualizado em: 2026-10-20
 |---|---|
 | Confirmar se o plano da HostGator tem cPanel | irmão |
 | Fotos de Arlindo, Bruno e Flavia (Vitor e Silvia já estão no site) | Vitor |
-| Conferir a licença das imagens de prédios (_fotos_tmp) antes de publicar | Vitor |
+| Imagens de prédios: são prévias com marca d'água de banco de imagens. Baixar as versões licenciadas (PNG transparente) antes de publicar; o recorte é refeito em minutos | Vitor |
 | Fotos reais de condomínios atendidos (sem placas ou nomes) | Vitor |
 | Reunir 3 ou 4 exemplos de trabalho (sem nome de condomínio) | Vitor |
 
@@ -58,6 +58,7 @@ Atualizado em: 2026-10-20
 
 | Data | Tarefa | Commit |
 |---|---|---|
+| 2026-10-20 | rodapé completo e Exemplos em espera | feat: rodapé completo |
 | 2026-10-20 | nova ordem, prédios em foto e equipe | feat: nova ordem das seções |
 | 2026-10-20 | orçamento em etapas | feat: orçamento em etapas |
 | 2026-10-20 | diagnóstico rápido | feat: diagnóstico rápido |

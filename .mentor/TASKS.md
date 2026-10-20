@@ -3,14 +3,14 @@
 > Uma tarefa = uma sessão de trabalho, um objetivo verificável, um commit.
 > Concluída significa: testada no navegador e commitada.
 
-Atualizado em: 2026-10-12
+Atualizado em: 2026-10-20
 
 ---
 
 ## Agora
 
-- [ ] Levar as cores do protótipo para o estilo.css (modo escuro padrão + modo claro)
-  - Pronto quando: o botão de sol/lua troca o modo e a escolha continua ao recarregar a página
+- [ ] Topo em duas colunas com os prédios animados (Etapa 9)
+  - Pronto quando: prédios à direita no computador, embaixo do texto no celular, nos dois modos
 
 ---
 
@@ -59,7 +59,10 @@ Atualizado em: 2026-10-12
 
 | Data | Tarefa | Commit |
 |---|---|---|
-| 2026-10-13 | protótipo visual aprovado (prototipo/prototipo.html) | — |
+| 2026-10-20 | topo com texto do protótipo, curva vinho e faixa de valores | 384524b |
+| 2026-10-20 | botão de modo escuro/claro com memória da escolha | feat: botão de modo |
+| 2026-10-20 | cores do protótipo com modo escuro padrão | feat: cores do protótipo |
+| 2026-10-13 | protótipo visual aprovado (prototipo/prototipo.html) | docs: protótipo aprovado |
 | 2026-10-12 | seção de serviços (2 cartões) | feat: seção de serviços |
 | 2026-10-12 | correção do número do WhatsApp | fix: corrige número |
 | 2026-10-12 | topo com chamada e botão de WhatsApp | 79e8a65 |

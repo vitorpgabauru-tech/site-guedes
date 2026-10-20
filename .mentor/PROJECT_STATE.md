@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-13 (protótipo visual aprovado)
+Atualizado em: 2026-10-20 (Etapa 9)
 
 ---
 
@@ -44,21 +44,21 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: protótipo visual aprovado em 2026-10-13 (prototipo/prototipo.html, ver ADR-004)
-Próxima etapa: levar o protótipo para o index.html, uma seção por vez, começando pelas cores
-(modo escuro/claro) e pelo topo com a curva vinho
+Última etapa concluída: Etapa 8, topo com texto do protótipo, curva vinho e faixa de valores (384524b)
+Em revisão: Etapa 9, topo em duas colunas com os prédios animados
+Próxima etapa: barra de navegação fixa no alto (logo, menu, botão de modo, "Pedir orçamento")
 
 ## Já funciona
 
-- topo com chamada principal e botão de WhatsApp para (14) 99894-0464
-- seção de serviços com cartão para construtoras e cartão para condomínios
+- cores do protótipo com modo escuro padrão e modo claro (botão sol/lua, escolha salva no localStorage)
+- topo com texto do protótipo, botão de WhatsApp (14) 99894-0464, slogan, curva vinho e faixa de valores
+- seção de serviços com 2 cartões (será trocada pelas cinco frentes do protótipo)
 - demais seções só com título
-- css/estilo.css com cores da marca, fontes Montserrat e Open Sans, base responsiva
 - código no GitHub
 
 ## Ainda não funciona
 
-- tudo do protótipo ainda precisa ser levado para o index.html
+- navegação, cinco frentes, diagnóstico, vistoria, equipe, construtoras, orçamento e rodapé do protótipo
 - fotos individuais da equipe (serão tiradas)
 
 ## Decisões que não se reabrem
@@ -77,8 +77,10 @@ Próxima etapa: levar o protótipo para o index.html, uma seção por vez, come�
 ## Contexto que o mentor precisa saber
 
 - Vitor é iniciante: já mexeu com HTML, mas pouco. Explicar conceitos novos com analogia.
-- Formato das instruções: trocas sempre como "Localizar" / "Substituir por" (texto completo, de preferência
-  uma linha, para usar no Ctrl + H). Textos novos: indicar a linha âncora e colar depois dela.
+- Fluxo de trabalho (desde 2026-10-20): o mentor aplica as mudanças direto nos arquivos da pasta (ligação
+  com o computador) e testa antes; Vitor revisa no Source Control (Ctrl + Shift + G), testa no navegador e
+  faz o commit. Se ele pedir para voltar ao modo manual: trocas como "Localizar" / "Substituir por" (Ctrl + H).
+- Comandos do Git sempre num bloco só (add, commit, push); comandos destrutivos separados.
 - WhatsApp oficial da empresa: (14) 99894-0464 (wa.me/5514998940464).
 - O domínio está na HostGator; quem tem acesso é o irmão (sócio). Vitor nunca cola senha no chat.
 - O e-mail da empresa (sindico@guedesdeazevedo.com.br) usa o mesmo domínio: nunca mexer em

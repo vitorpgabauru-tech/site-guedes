@@ -13,17 +13,35 @@
 <script>try { if (localStorage.getItem("modo") === "claro") document.documentElement.classList.add("claro"); } catch (e) {}</script></head>
 <body>
 
-    <header id="inicio">
-          <button class="modo" id="modo" type="button" aria-label="Mudar para o modo claro">
+  <header id="inicio">
+    <button class="modo" id="modo" type="button" aria-label="Mudar para o modo claro">
       <svg class="ic-sol" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
       <svg class="ic-lua" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
     </button>
-    <p class="marca">Síndico profissional · Bauru e Marília · desde 2016</p>
-    <h1>Gestão completa para o seu condomínio funcionar de verdade</h1>
-    <p class="subtitulo">Contas claras, segurança que funciona, regras cumpridas e manutenção em dia. Uma equipe dedicada a cada frente da gestão, com engenharia civil e consultoria jurídica.</p>
-    <!-- target="_blank" abre em nova aba; rel="noopener" impede a página aberta de controlar a nossa (boa prática de segurança) -->
-    <a class="botao" href="https://wa.me/5514998940464?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20s%C3%ADndico%20profissional." target="_blank" rel="noopener">Falar no WhatsApp</a>
-  <p class="slogan">"O seu bem em boas mãos."</p><svg class="curva" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0,150 L0,95 C360,10 900,0 1440,70 L1440,150 Z"/></svg></header>
+    <!-- Duas colunas no computador: texto à esquerda, prédios à direita. No celular, uma embaixo da outra -->
+    <div class="hero-grade">
+      <div class="hero-texto">
+        <p class="marca">Síndico profissional · Bauru e Marília · desde 2016</p>
+        <h1>Gestão completa para o seu condomínio funcionar de verdade</h1>
+        <p class="subtitulo">Contas claras, segurança que funciona, regras cumpridas e manutenção em dia. Uma equipe dedicada a cada frente da gestão, com engenharia civil e consultoria jurídica.</p>
+        <!-- target="_blank" abre em nova aba; rel="noopener" impede a página aberta de controlar a nossa (boa prática de segurança) -->
+        <a class="botao" href="https://wa.me/5514998940464?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20s%C3%ADndico%20profissional." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <p class="slogan">"O seu bem em boas mãos."</p>
+      </div>
+      <svg class="skyline" viewBox="0 0 520 470" role="img" aria-label="Ilustração de prédios residenciais">
+        <defs>
+          <pattern id="janelas" width="14" height="16" patternUnits="userSpaceOnUse"><rect x="3" y="3" width="8" height="10" class="janela"/></pattern>
+          <pattern id="janelas2" width="10" height="12" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="6" height="8" class="janela"/></pattern>
+        </defs>
+        <g class="predio" style="animation-delay:.05s"><rect x="10" y="230" width="80" height="240" style="fill:var(--p1)"/><rect x="10" y="230" width="80" height="240" fill="url(#janelas2)"/></g>
+        <g class="predio" style="animation-delay:.15s"><rect x="72" y="120" width="110" height="350" style="fill:var(--p2)"/><rect x="72" y="120" width="110" height="350" fill="url(#janelas)"/></g>
+        <g class="predio" style="animation-delay:.25s"><rect x="190" y="20" width="130" height="450" style="fill:var(--p3)"/><rect x="190" y="20" width="130" height="450" fill="url(#janelas)"/><rect x="238" y="0" width="34" height="22" style="fill:var(--p3)"/></g>
+        <g class="predio" style="animation-delay:.35s"><rect x="300" y="160" width="120" height="310" style="fill:var(--p4)"/><rect x="300" y="160" width="120" height="310" fill="url(#janelas)"/></g>
+        <g class="predio" style="animation-delay:.45s"><rect x="410" y="260" width="100" height="210" style="fill:var(--p5)"/><rect x="410" y="260" width="100" height="210" fill="url(#janelas2)"/></g>
+      </svg>
+    </div>
+    <svg class="curva" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0,150 L0,95 C360,10 900,0 1440,70 L1440,150 Z"/></svg>
+  </header>
 
   <div class="valores" aria-label="Nossos valores">
     <div class="valor">
@@ -42,7 +60,7 @@
   <main>
     <section id="servicos">
       <h2>Como podemos ajudar</h2>
-            <div class="painel" id="painel-construtora">
+      <div class="painel" id="painel-construtora">
         <h3>Para construtoras: implantação de condomínios novos</h3>
         <p>Assumimos o condomínio desde a entrega das chaves, para que ele comece organizado e a construtora tenha um único interlocutor técnico.</p>
         <ul class="lista">

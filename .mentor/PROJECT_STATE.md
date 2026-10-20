@@ -27,7 +27,7 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 | Código | HTML, CSS e JavaScript puros, sem framework |
 | Backend | nenhum no MVP |
 | Banco | nenhum |
-| Hospedagem | a definir (ver ADR-003) |
+| Hospedagem | HostGator, Plano M, cPanel; pasta /public_html/sindico (ADR-003) |
 | Fontes | Montserrat e Open Sans no próprio site (css/fontes, licença OFL) |
 | Repositório | https://github.com/vitorpgabauru-tech/site-guedes (privado, branch main) |
 
@@ -44,7 +44,7 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 
 ## Onde estamos
 
-Marco atual: M4 — Revisão final
+Marco atual: M5 — Publicação
 Última etapa concluída: Etapas 18 e 19 (construtoras, vistoria, prédios sólidos)
 Em revisão: Etapa 20, revisão final: fontes locais (css/fontes), ícones, Open Graph (img/compartilhar.jpg),
 dados para o Google (JSON-LD), descrição nova e correções de texto
@@ -89,7 +89,13 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
 
 ## Problemas conhecidos
 
-- nenhum
+- A pasta /public_html/sindico tem, além do site antigo do construtor, um WordPress abandonado desde 2016
+  (tema de casamento, WooCommerce, LayerSlider, Revolution Slider) recebendo acessos e gerando erros
+  (error_log de 12 MB). É uma porta de entrada para ataques: sai na publicação.
+- Há um backup antigo, bkp(15.05.17).zip (72 MB), dentro da pasta pública: qualquer pessoa que souber o nome
+  pode baixá-lo. Sai na publicação.
+- Backup completo do site antigo feito em 2026-10-20 (site-antigo-2026-10-20.zip, no computador do Vitor).
+- O .htaccess antigo manda celulares para index_mobile.html; o site novo traz um .htaccess próprio.
 
 ## Contexto que o mentor precisa saber
 

@@ -13,7 +13,7 @@ Atualizado em: 2026-10-12
 |---|---|---|---|
 | 001 | Site estático em HTML/CSS/JS puro | aceita | 2026-10-12 |
 | 002 | Formulário de orçamento via WhatsApp | aceita | 2026-10-12 |
-| 003 | Hospedagem | pendente | 2026-10-12 |
+| 003 | Hospedagem: HostGator, Plano M, cPanel | aceita | 2026-10-20 |
 | 004 | Posicionamento, visual e estrutura da página | aceita | 2026-10-13 |
 | 005 | Referência de interação: gorgonoid.com/links | aceita | 2026-10-20 |
 
@@ -85,22 +85,27 @@ caixa de consentimento.
 
 ## ADR-003 — Hospedagem
 
-Data: 2026-10-12
-Status: pendente
+Data: 2026-10-12 (decidida em 2026-10-20)
+Status: aceita
 
 Contexto
-O domínio guedesdeazevedo.com.br está na HostGator. O site atual parece usar o criador de sites
-da HostGator. O e-mail da empresa usa o mesmo domínio.
-
-Opções
-- Se o plano da HostGator tiver cPanel: subir os arquivos lá, sem mexer no domínio.
-- Se não tiver: hospedagem estática gratuita (GitHub Pages ou Cloudflare Pages) e alterar apenas
-  o registro do subdomínio "sindico". Os registros MX (e-mail) nunca são tocados.
+O domínio guedesdeazevedo.com.br está na HostGator. O site antigo, o domínio principal e o e-mail
+(mail.guedesdeazevedo.com.br, registro MX) apontam para o mesmo servidor (50.116.87.254).
 
 Decisão
-A definir quando o irmão confirmar se o plano tem cPanel. Limites dos serviços gratuitos devem
-ser verificados na data da publicação.
+Publicar na própria HostGator: plano de hospedagem "Plano M", com cPanel. O subdomínio
+sindico.guedesdeazevedo.com.br já existe e sua raiz é /public_html/sindico. Os arquivos do site novo
+vão para essa pasta, pelo Gerenciador de Arquivos do cPanel.
 
+Justificativa
+Não precisa mexer em DNS (nem no MX do e-mail), o plano já é pago e o subdomínio já existe.
+
+Consequências
+Ganha: publicação simples, sem risco para o e-mail.
+Perde: cada atualização é um envio manual de arquivos (no futuro dá para automatizar com Git/FTP).
+
+Revisar se
+A empresa trocar de hospedagem ou quiser publicar direto do GitHub.
 ---
 
 ## ADR-004 — Posicionamento, visual e estrutura da página

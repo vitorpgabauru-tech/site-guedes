@@ -1,0 +1,41 @@
+# Configuração do servidor para o site novo (Apache, HostGator).
+# Substitui o .htaccess antigo (do construtor de sites e do WordPress).
+
+# Abre o index.html quando alguém entra no endereço sem nome de arquivo
+DirectoryIndex index.html
+
+# Não mostra a lista de arquivos de uma pasta que não tenha index
+Options -Indexes
+
+# Garante o tipo certo para formatos mais novos
+AddType image/webp .webp
+AddType font/woff2 .woff2
+
+# Esconde pastas de trabalho, caso sejam enviadas por engano (.git, .mentor, protótipo)
+RedirectMatch 404 "/\.(git|mentor)(/|$)"
+RedirectMatch 404 "^/prototipo(/|$)"
+
+# Cache no navegador do visitante: imagens e fontes guardadas por mais tempo;
+# CSS e JavaScript por 1 dia (depois de uma atualização, todo mundo vê a versão nova em até 1 dia);
+# a página em si sempre conferida de novo
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType text/javascript "access plus 1 day"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Proteções básicas
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# HTTPS (cadeado): será ligado depois da publicação, pelo botão do cPanel em Domínios,
+# quando o certificado estiver funcionando.

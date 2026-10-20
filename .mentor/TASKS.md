@@ -39,7 +39,6 @@ Atualizado em: 2026-10-20
 
 | O quê | Com quem |
 |---|---|
-| Confirmar se o plano da HostGator tem cPanel | irmão |
 | Fotos de Arlindo, Bruno e Flavia (Vitor e Silvia já estão no site) | Vitor |
 | Imagens de prédios: são prévias com marca d'água de banco de imagens. Baixar as versões licenciadas (PNG transparente) antes de publicar; o recorte é refeito em minutos | Vitor |
 | Fotos reais de condomínios atendidos (sem placas ou nomes) | Vitor |

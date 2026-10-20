@@ -9,8 +9,8 @@ Atualizado em: 2026-10-20
 
 ## Agora
 
-- [ ] Orçamento em etapas (Etapa 15)
-  - Pronto quando: não avança sem as obrigatórias, a prévia acompanha e a mensagem chega certa num celular real
+- [ ] Nova ordem, prédios em foto e equipe (Etapa 16)
+  - Pronto quando: diagnóstico e orçamento em sequência; prédios animados; equipe com fotos/iniciais
 
 ---
 
@@ -30,7 +30,8 @@ Atualizado em: 2026-10-20
 | O quê | Com quem |
 |---|---|
 | Confirmar se o plano da HostGator tem cPanel | irmão |
-| Fotos individuais da equipe, mesmo fundo (Vitor, Arlindo, Bruno, Silvia, Flavia) | Vitor |
+| Fotos de Arlindo, Bruno e Flavia (Vitor e Silvia já estão no site) | Vitor |
+| Conferir a licença das imagens de prédios (_fotos_tmp) antes de publicar | Vitor |
 | Fotos reais de condomínios atendidos (sem placas ou nomes) | Vitor |
 | Definir o e-mail oficial de contato (atendimento@ ou sindico@) | Vitor |
 
@@ -57,6 +58,7 @@ Atualizado em: 2026-10-20
 
 | Data | Tarefa | Commit |
 |---|---|---|
+| 2026-10-20 | orçamento em etapas | feat: orçamento em etapas |
 | 2026-10-20 | diagnóstico rápido | feat: diagnóstico rápido |
 | 2026-10-20 | abas em pílulas e WhatsApp flutuante | feat: abas em pílulas |
 | 2026-10-20 | logo original e cinco frentes em cartões | feat: logo original e cinco frentes |

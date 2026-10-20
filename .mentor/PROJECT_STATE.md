@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 15)
+Atualizado em: 2026-10-20 (Etapa 16)
 
 ---
 
@@ -44,9 +44,10 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: Etapa 14, diagnóstico rápido
-Em revisão: Etapa 15, orçamento em 6 etapas com prévia da mensagem num "celular" e envio pelo WhatsApp
-Próxima etapa: seção Equipe (Vitor, Arlindo, Bruno, Silvia, Flavia), com iniciais até chegarem as fotos
+Última etapa concluída: Etapa 15, orçamento em etapas
+Em revisão: Etapa 16, nova ordem (gestão, diagnóstico, orçamento, exemplos, equipe), prédios em foto com
+paralaxe no topo e seção Equipe (fotos de Vitor e Silvia; iniciais para Arlindo, Bruno e Flavia)
+Próxima etapa: seção Exemplos do nosso trabalho (cartões sem nome de condomínio) e rodapé completo
 Observação: o menu da barra virou as abas em pílulas; ao criar uma seção nova, acrescentar a aba dela
 Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram
 
@@ -56,6 +57,8 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
 - topo com texto do protótipo, prédios animados, botão de WhatsApp (14) 99894-0464, slogan, curva vinho e faixa de valores
 - barra fixa com logo, sol/lua, Pedir orçamento e abas em pílulas (seção atual destacada)
 - WhatsApp flutuante com balão (balão só no computador)
+- topo: 5 prédios em foto (img/predio-1..5.webp, fundo recortado de _fotos_tmp) sobem ao abrir e se mexem com o mouse
+- seção #quem-somos: equipe com credenciais e 5 cartões
 - seção #orcamento: perfil, nome, cidade, condomínio, unidades (opcional), administradora (opcional);
   inclui os pontos do diagnóstico se houver; prévia ao vivo; nada fica guardado no site
 - seção #diagnostico: 10 situações para marcar, resultado por frente (sem sinais / atenção / prioridade)

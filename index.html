@@ -39,9 +39,9 @@
       <ul class="abas">
         <li><a class="aba" href="#gestao">Nossa gestão</a></li>
         <li><a class="aba" href="#diagnostico">Diagnóstico</a></li>
+        <li><a class="aba" href="#orcamento">Orçamento</a></li>
         <li><a class="aba" href="#exemplos">Exemplos</a></li>
         <li><a class="aba" href="#quem-somos">Equipe</a></li>
-        <li><a class="aba" href="#orcamento">Orçamento</a></li>
       </ul>
     </div>
   </nav>
@@ -60,17 +60,15 @@
         </div>
         <p class="slogan">"O seu bem em boas mãos."</p>
       </div>
-      <svg class="skyline" viewBox="0 0 520 470" role="img" aria-label="Ilustração de prédios residenciais">
-        <defs>
-          <pattern id="janelas" width="14" height="16" patternUnits="userSpaceOnUse"><rect x="3" y="3" width="8" height="10" class="janela"/></pattern>
-          <pattern id="janelas2" width="10" height="12" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="6" height="8" class="janela"/></pattern>
-        </defs>
-        <g class="predio" style="animation-delay:.05s"><rect x="10" y="230" width="80" height="240" style="fill:var(--p1)"/><rect x="10" y="230" width="80" height="240" fill="url(#janelas2)"/></g>
-        <g class="predio" style="animation-delay:.15s"><rect x="72" y="120" width="110" height="350" style="fill:var(--p2)"/><rect x="72" y="120" width="110" height="350" fill="url(#janelas)"/></g>
-        <g class="predio" style="animation-delay:.25s"><rect x="190" y="20" width="130" height="450" style="fill:var(--p3)"/><rect x="190" y="20" width="130" height="450" fill="url(#janelas)"/><rect x="238" y="0" width="34" height="22" style="fill:var(--p3)"/></g>
-        <g class="predio" style="animation-delay:.35s"><rect x="300" y="160" width="120" height="310" style="fill:var(--p4)"/><rect x="300" y="160" width="120" height="310" fill="url(#janelas)"/></g>
-        <g class="predio" style="animation-delay:.45s"><rect x="410" y="260" width="100" height="210" style="fill:var(--p5)"/><rect x="410" y="260" width="100" height="210" fill="url(#janelas2)"/></g>
-      </svg>
+      <!-- Prédios em foto (fundo recortado). Cada um sobe com um pequeno atraso (--atraso) e,
+           no computador, se mexe um pouco com o mouse em profundidades diferentes (--prof): efeito de paralaxe -->
+      <div class="skyline" id="skyline" aria-hidden="true">
+        <img class="predio" src="img/predio-2.webp" alt="" style="--x: -2%; --h: 70%; --z: 1; --atraso: 0.30s; --prof: 0.4" width="523" height="760">
+        <img class="predio" src="img/predio-1.webp" alt="" style="--x: 8%; --h: 80%; --z: 2; --atraso: 0.15s; --prof: 0.7" width="553" height="760">
+        <img class="predio" src="img/predio-4.webp" alt="" style="--x: 26%; --h: 92%; --z: 4; --atraso: 0s; --prof: 1" width="486" height="760">
+        <img class="predio" src="img/predio-3.webp" alt="" style="--x: 44%; --h: 74%; --z: 3; --atraso: 0.22s; --prof: 0.8" width="624" height="760">
+        <img class="predio" src="img/predio-5.webp" alt="" style="--x: 66%; --h: 62%; --z: 2; --atraso: 0.38s; --prof: 0.5" width="466" height="760">
+      </div>
     </div>
     <svg class="curva" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0,150 L0,95 C360,10 900,0 1440,70 L1440,150 Z"/></svg>
   </header>
@@ -291,14 +289,6 @@
       </div>
     </section>
 
-    <section id="exemplos">
-      <h2>Exemplos do nosso trabalho</h2>
-    </section>
-
-    <section id="quem-somos">
-      <h2>Quem somos</h2>
-    </section>
-
     <!-- Orçamento em etapas: uma pergunta por vez (js/site.js mostra uma e esconde as outras).
          Ao lado, a prévia da mensagem vai se montando. No fim, o WhatsApp abre com tudo escrito.
          Sem JavaScript, todas as perguntas aparecem juntas. -->
@@ -375,6 +365,92 @@
         </div>
       </div>
     </section>
+
+    <section id="exemplos">
+      <h2>Exemplos do nosso trabalho</h2>
+    </section>
+
+    <!-- Equipe: uma pessoa por frente. Quem ainda não tem foto aparece com a inicial (trocar quando as fotos chegarem) -->
+    <section id="quem-somos">
+      <p class="eyebrow">Quem somos</p>
+      <h2>Uma equipe para cada frente da gestão</h2>
+      <p class="secao-intro">Desde 2016 a Guedes de Azevedo faz gestão de condomínios em Bauru e Marília. Síndico profissional, aqui, não é uma pessoa sozinha resolvendo tudo: cada área tem um responsável.</p>
+      <ul class="credenciais">
+        <li>Desde 2016</li>
+        <li>Dois engenheiros civis</li>
+        <li>Consultoria jurídica</li>
+        <li>Balancetes auditados</li>
+        <li>Seguro de responsabilidade civil</li>
+      </ul>
+      <div class="pessoas">
+        <article class="pessoa">
+          <div class="foto"><img src="img/equipe-vitor.webp" alt="Foto de Vitor" width="600" height="600" loading="lazy"></div>
+          <div class="pessoa-info">
+            <p class="cargo">Financeiro e manutenção</p>
+            <h3>Vitor</h3>
+            <p class="formacao">Engenheiro civil, pós-graduado em administração pela FGV.</p>
+            <ul class="lista">
+            <li>Prestação de contas e orçamento anual</li>
+            <li>Plano de manutenção preventiva</li>
+            <li>Contratos e fornecedores</li>
+            </ul>
+          </div>
+        </article>
+        <article class="pessoa">
+          <div class="foto"><span class="inicial" aria-hidden="true">A</span></div>
+          <div class="pessoa-info">
+            <p class="cargo">Obras e manutenção</p>
+            <h3>Arlindo</h3>
+            <p class="formacao">Engenheiro civil especialista em obras e manutenção.</p>
+            <ul class="lista">
+            <li>Vistorias técnicas</li>
+            <li>Acompanhamento de obras e reformas</li>
+            <li>Laudos e sistemas do prédio</li>
+            </ul>
+          </div>
+        </article>
+        <article class="pessoa">
+          <div class="foto"><span class="inicial" aria-hidden="true">B</span></div>
+          <div class="pessoa-info">
+            <p class="cargo">Jurídico</p>
+            <h3>Bruno</h3>
+            <p class="formacao">Advogado responsável pela consultoria jurídica.</p>
+            <ul class="lista">
+            <li>Apoio jurídico nas decisões</li>
+            <li>Defesa do condomínio</li>
+            <li>Convenção, regimento e contratos</li>
+            </ul>
+          </div>
+        </article>
+        <article class="pessoa">
+          <div class="foto"><img src="img/equipe-silvia.webp" alt="Foto de Silvia" width="600" height="600" loading="lazy"></div>
+          <div class="pessoa-info">
+            <p class="cargo">Operacional</p>
+            <h3>Silvia</h3>
+            <p class="formacao">Responsável pelo operacional de limpeza e jardinagem.</p>
+            <ul class="lista">
+            <li>Equipes de limpeza</li>
+            <li>Jardinagem e conservação</li>
+            <li>Rotina das áreas comuns</li>
+            </ul>
+          </div>
+        </article>
+        <article class="pessoa">
+          <div class="foto"><span class="inicial" aria-hidden="true">F</span></div>
+          <div class="pessoa-info">
+            <p class="cargo">Comunicação e regras</p>
+            <h3>Flavia</h3>
+            <p class="formacao">Responsável pela comunicação e pelo controle de notificações e multas.</p>
+            <ul class="lista">
+            <li>Comunicados e mural virtual</li>
+            <li>Notificações e multas</li>
+            <li>Atendimento aos moradores</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <footer>

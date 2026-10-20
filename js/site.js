@@ -259,3 +259,19 @@ if (formOrcamento) {
   mostrarPasso(0);
   atualizarPrevia();
 }
+
+// Paralaxe dos prédios do topo: conforme o mouse anda pelo topo, guardamos em --px um número
+// de -1 (mouse na esquerda) a 1 (mouse na direita). O CSS move cada prédio de acordo.
+// Só em telas com mouse (no celular não há "passar o mouse").
+const topo = document.getElementById('inicio');
+const skyline = document.getElementById('skyline');
+
+if (topo && skyline && window.matchMedia('(hover: hover)').matches) {
+  topo.addEventListener('pointermove', function (evento) {
+    const posicao = (evento.clientX / window.innerWidth) * 2 - 1;
+    skyline.style.setProperty('--px', posicao.toFixed(2));
+  });
+  topo.addEventListener('pointerleave', function () {
+    skyline.style.setProperty('--px', 0);
+  });
+}

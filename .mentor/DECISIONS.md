@@ -14,6 +14,7 @@ Atualizado em: 2026-10-12
 | 001 | Site estático em HTML/CSS/JS puro | aceita | 2026-10-12 |
 | 002 | Formulário de orçamento via WhatsApp | aceita | 2026-10-12 |
 | 003 | Hospedagem | pendente | 2026-10-12 |
+| 004 | Posicionamento, visual e estrutura da página | aceita | 2026-10-13 |
 
 ---
 
@@ -98,3 +99,37 @@ Opções
 Decisão
 A definir quando o irmão confirmar se o plano tem cPanel. Limites dos serviços gratuitos devem
 ser verificados na data da publicação.
+
+---
+
+## ADR-004 — Posicionamento, visual e estrutura da página
+
+Data: 2026-10-13
+Status: aceita
+
+Contexto
+O primeiro rascunho dava o mesmo peso a construtoras e a condomínios existentes, com destaque
+para a implantação. O cliente que a empresa mais quer hoje é o condomínio já entregue que precisa
+de melhorias na gestão.
+
+Decisão
+- Público principal: condomínios já entregues. Construtoras numa seção secundária, mais abaixo.
+- Cinco frentes em destaque: controle e transparência financeira, segurança patrimonial moderna,
+  cumprimento real das regras, valorização do imóvel, manutenção e funcionamento pleno.
+- Engenharia como diferencial dentro de uma gestão completa (financeiro, administrativo, jurídico,
+  operacional, comunicação).
+- Visual: continuidade com o folder (prédios, curva vinho, valores do banner). Modo escuro como
+  padrão, com botão para o modo claro; a escolha fica salva no navegador (localStorage).
+- Interações: abas das cinco frentes, diagnóstico "Como está o seu condomínio hoje?" que leva os
+  pontos marcados para a mensagem, prédio clicável da vistoria e orçamento em etapas pelo WhatsApp.
+- Equipe: Vitor (financeiro e manutenção), Arlindo (obras e manutenção), Bruno (jurídico),
+  Silvia (operacional de limpeza e jardinagem) e Flavia (comunicação, notificações e multas).
+- Modelo de referência: prototipo/prototipo.html.
+
+Consequências
+Ganha: mensagem clara para o cliente certo e interatividade que demonstra o serviço.
+Perde: mais JavaScript para o Vitor aprender e manter; a página fica mais longa.
+
+Revisar se
+A empresa mudar de foco comercial ou a equipe mudar (atualizar a seção Equipe).
+

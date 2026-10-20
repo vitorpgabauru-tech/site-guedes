@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-12 (fim do Marco 1)
+Atualizado em: 2026-10-13 (protótipo visual aprovado)
 
 ---
 
@@ -15,8 +15,9 @@ WhatsApp, sem diferencial técnico, com erros de português).
 
 Objetivo: quem entra entende o serviço, vê exemplos do trabalho e pede orçamento.
 
-Para quem: construtoras que vão implantar condomínios e condomínios existentes (síndicos,
-conselheiros, moradores) em Bauru e Marília.
+Para quem: principalmente condomínios já entregues que precisam de melhorias e solução para a
+gestão (síndicos, conselheiros, moradores) em Bauru e Marília. Construtoras aparecem numa seção
+secundária (implantação), sem ser o foco.
 Tamanho: M (site estático, sem login e sem banco de dados).
 
 ## Stack
@@ -43,18 +44,22 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída e testada: Marco 1 fechado (estrutura, CSS base, push para o GitHub)
-Próxima etapa: topo completo com chamada principal e botão de WhatsApp
+Última etapa concluída: protótipo visual aprovado em 2026-10-13 (prototipo/prototipo.html, ver ADR-004)
+Próxima etapa: levar o protótipo para o index.html, uma seção por vez, começando pelas cores
+(modo escuro/claro) e pelo topo com a curva vinho
 
 ## Já funciona
 
-- index.html com as 5 seções (só títulos)
+- topo com chamada principal e botão de WhatsApp para (14) 99894-0464
+- seção de serviços com cartão para construtoras e cartão para condomínios
+- demais seções só com título
 - css/estilo.css com cores da marca, fontes Montserrat e Open Sans, base responsiva
 - código no GitHub
 
 ## Ainda não funciona
 
-- textos das seções, botão de WhatsApp, interatividade, formulário
+- tudo do protótipo ainda precisa ser levado para o index.html
+- fotos individuais da equipe (serão tiradas)
 
 ## Decisões que não se reabrem
 
@@ -62,6 +67,8 @@ Próxima etapa: topo completo com chamada principal e botão de WhatsApp
 - Formulário de orçamento abre o WhatsApp com a mensagem pronta (ADR-002)
 - Bild e Vitta não aparecem no site: não têm relação com a empresa
 - Exemplos de trabalho sem nome de condomínio
+- Foco em condomínios já entregues; implantação para construtoras é seção secundária (ADR-004)
+- Visual: continuidade com o folder, modo escuro padrão com opção clara (ADR-004)
 
 ## Problemas conhecidos
 
@@ -70,6 +77,9 @@ Próxima etapa: topo completo com chamada principal e botão de WhatsApp
 ## Contexto que o mentor precisa saber
 
 - Vitor é iniciante: já mexeu com HTML, mas pouco. Explicar conceitos novos com analogia.
+- Formato das instruções: trocas sempre como "Localizar" / "Substituir por" (texto completo, de preferência
+  uma linha, para usar no Ctrl + H). Textos novos: indicar a linha âncora e colar depois dela.
+- WhatsApp oficial da empresa: (14) 99894-0464 (wa.me/5514998940464).
 - O domínio está na HostGator; quem tem acesso é o irmão (sócio). Vitor nunca cola senha no chat.
 - O e-mail da empresa (sindico@guedesdeazevedo.com.br) usa o mesmo domínio: nunca mexer em
   registros MX na publicação.

@@ -10,8 +10,8 @@ Atualizado em: 2026-10-12
 
 | # | Funcionalidade | Status |
 |---|---|---|
-| 1 | Topo com frase principal e botão de WhatsApp | pendente |
-| 2 | Serviços com seleção interativa: "sou construtora" / "sou de um condomínio existente" | pendente |
+| 1 | Topo com frase principal e botão de WhatsApp | concluído |
+| 2 | Serviços com seleção interativa: "sou construtora" / "sou de um condomínio existente" | em andamento (conteúdo pronto) |
 | 3 | Exemplos de trabalho em cartões, sem nomes de condomínio | pendente |
 | 4 | Quem somos: engenharia civil, CREA, FGV, equipe | pendente |
 | 5 | Formulário de interesse em orçamento que abre o WhatsApp com a mensagem pronta | pendente |

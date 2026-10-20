@@ -9,8 +9,8 @@ Atualizado em: 2026-10-20
 
 ## Agora
 
-- [ ] Topo em duas colunas com os prédios animados (Etapa 9)
-  - Pronto quando: prédios à direita no computador, embaixo do texto no celular, nos dois modos
+- [ ] Barra de navegação fixa (Etapa 10)
+  - Pronto quando: a barra fica grudada no alto ao rolar, o menu leva às seções e cabe no celular
 
 ---
 
@@ -59,6 +59,7 @@ Atualizado em: 2026-10-20
 
 | Data | Tarefa | Commit |
 |---|---|---|
+| 2026-10-20 | topo em duas colunas com prédios animados | feat: topo em duas colunas |
 | 2026-10-20 | topo com texto do protótipo, curva vinho e faixa de valores | 384524b |
 | 2026-10-20 | botão de modo escuro/claro com memória da escolha | feat: botão de modo |
 | 2026-10-20 | cores do protótipo com modo escuro padrão | feat: cores do protótipo |

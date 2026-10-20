@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 9)
+Atualizado em: 2026-10-20 (Etapa 10)
 
 ---
 
@@ -44,14 +44,15 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: Etapa 8, topo com texto do protótipo, curva vinho e faixa de valores (384524b)
-Em revisão: Etapa 9, topo em duas colunas com os prédios animados
-Próxima etapa: barra de navegação fixa no alto (logo, menu, botão de modo, "Pedir orçamento")
+Última etapa concluída: Etapa 9, topo em duas colunas com os prédios animados
+Em revisão: Etapa 10, barra de navegação fixa (logo, menu, botão de modo, "Pedir orçamento")
+Próxima etapa: seção das cinco frentes da gestão (abas), no lugar dos 2 cartões de serviço
+Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram
 
 ## Já funciona
 
 - cores do protótipo com modo escuro padrão e modo claro (botão sol/lua, escolha salva no localStorage)
-- topo com texto do protótipo, botão de WhatsApp (14) 99894-0464, slogan, curva vinho e faixa de valores
+- topo com texto do protótipo, prédios animados, botão de WhatsApp (14) 99894-0464, slogan, curva vinho e faixa de valores
 - seção de serviços com 2 cartões (será trocada pelas cinco frentes do protótipo)
 - demais seções só com título
 - código no GitHub

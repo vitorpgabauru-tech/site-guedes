@@ -16,6 +16,11 @@
   --p1: #393737; --p2: #474444; --p3: #2B2929; --p4: #3E3B3B; --p5: #343232;
   --janela: #F2C66D;
   --janela-op: 0.5;
+  /* Barra de navegação (semitransparente) e cores do desenho do logo */
+  --nav-bg: rgba(18, 17, 17, 0.9);
+  --logo-a: #8E8A86;
+  --logo-b: #D6D1CC;
+  --logo-janela: #2A2727;
   --largura-max: 1100px;
   /* Avisa o navegador do modo, para barras de rolagem e campos de formulário combinarem */
   color-scheme: dark;
@@ -36,12 +41,23 @@
   --p1: #B9B7B4; --p2: #8E8C89; --p3: #55524F; --p4: #77746F; --p5: #A6A4A0;
   --janela: #FFFFFF;
   --janela-op: 0.55;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --logo-a: #7A7A7A;
+  --logo-b: #3A3A3A;
+  --logo-janela: #FFFFFF;
   color-scheme: light;
 }
 
 /* Faz a largura incluir o espaçamento interno; evita conteúdo vazando para fora da tela */
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+/* Rolagem suave ao clicar no menu. O scroll-padding-top desconta a altura da barra fixa,
+   senão o título da seção ficaria escondido atrás dela */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 /* Garante que o atributo hidden sempre esconda, mesmo que outra regra diga display: flex */
@@ -172,15 +188,13 @@ footer {
   padding: 24px 20px;
 }
 
-/* Botão de modo escuro/claro, no canto superior direito do topo */
+/* O topo precisa de position: relative para a curva (position: absolute) se posicionar em relação a ele */
 header {
   position: relative;
 }
 
+/* Botão de modo escuro/claro, dentro da barra de navegação */
 .modo {
-  position: absolute;
-  top: 16px;
-  right: 16px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -346,5 +360,116 @@ header .slogan {
 @media (prefers-reduced-motion: reduce) {
   .skyline .predio {
     animation: none;
+  }
+}
+
+/* ---------- Barra de navegação ---------- */
+/* sticky: rola junto com a página até encostar no alto, e aí fica grudada */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--nav-bg);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--borda);
+}
+
+.nav-conteudo {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.logo svg {
+  width: 40px;
+  height: 44px;
+  flex: none;
+}
+
+.logo .logo-a { fill: var(--logo-a); }
+.logo .logo-b { fill: var(--logo-b); }
+.logo .logo-janela { fill: var(--logo-janela); }
+
+.logo b {
+  display: block;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.3px;
+  line-height: 1;
+}
+
+.logo small {
+  display: block;
+  font-size: 12px;
+  color: var(--texto-suave);
+  margin-top: 3px;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.menu a {
+  color: var(--texto-suave);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--vinho-texto);
+}
+
+.nav-acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.botao-pequeno {
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+/* Tablet e celular: o menu some (as seções continuam acessíveis rolando a página) */
+@media (max-width: 960px) {
+  .menu {
+    display: none;
+  }
+}
+
+/* Celular: logo só com o nome, sem a linha "Síndico Profissional" */
+@media (max-width: 560px) {
+  .logo small {
+    display: none;
+  }
+
+  .logo b {
+    font-size: 14px;
+  }
+}
+
+/* Celular pequeno: some o nome e fica só o desenho do logo, para caber o botão de orçamento */
+@media (max-width: 420px) {
+  .logo span {
+    display: none;
   }
 }

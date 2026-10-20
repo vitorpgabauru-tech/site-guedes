@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 20)
+Atualizado em: 2026-10-20 (Etapa 21)
 
 ---
 
@@ -49,6 +49,7 @@ Marco atual: M4 — Revisão final
 Em revisão: Etapa 20, revisão final: fontes locais (css/fontes), ícones, Open Graph (img/compartilhar.jpg),
 dados para o Google (JSON-LD), descrição nova e correções de texto
 Próxima etapa: publicação (ver Marco 5 no ROADMAP), depois das pendências de TASKS.md
+Ordem das seções (2026-10-20): Nossa gestão → Equipe → Vistoria → Diagnóstico → Orçamento → (Exemplos, escondida) → Construtoras
 Em espera: Exemplos do nosso trabalho (Vitor está reunindo 3 ou 4 casos: tipo, tamanho, cidade, problema, solução)
 Observação: o menu da barra virou as abas em pílulas; ao criar uma seção nova, acrescentar a aba dela
 Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram

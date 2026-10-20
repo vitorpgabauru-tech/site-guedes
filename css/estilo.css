@@ -22,6 +22,11 @@
   --vinho-suave: #3A1B1C;
   --vinho-suave-texto: #F5B5B7;
   --brilho: rgba(179, 35, 42, 0.22);
+  /* Selos do diagnóstico: verde (sem sinais), âmbar (atenção) */
+  --ok-bg: #1F3A25;
+  --ok-texto: #9BD5A6;
+  --atencao-bg: #3D2E12;
+  --atencao-texto: #F2C66D;
   --largura-max: 1100px;
   /* Avisa o navegador do modo, para barras de rolagem e campos de formulário combinarem */
   color-scheme: dark;
@@ -46,6 +51,10 @@
   --vinho-suave: #F6E7E7;
   --vinho-suave-texto: #6E1013;
   --brilho: rgba(163, 25, 30, 0.08);
+  --ok-bg: #E3F1E5;
+  --ok-texto: #2F6B3A;
+  --atencao-bg: #FCEFD6;
+  --atencao-texto: #8A5200;
   color-scheme: light;
 }
 
@@ -741,5 +750,157 @@ header .slogan {
   .zap-balao {
     animation: none;
     opacity: 1;
+  }
+}
+
+/* ---------- Botões extras do topo ---------- */
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Botão vazado: só a borda vinho, sem fundo */
+.botao-contorno {
+  background: transparent;
+  color: var(--vinho-texto);
+  box-shadow: inset 0 0 0 2px var(--vinho-texto);
+}
+
+.botao-contorno:hover,
+.botao-contorno:focus-visible {
+  background: var(--vinho-suave);
+}
+
+.botao-largo {
+  display: block;
+  text-align: center;
+}
+
+/* Esconde da tela, mas mantém para leitores de tela (usado no título do grupo de opções) */
+.so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Diagnóstico ---------- */
+.diag {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 28px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+/* fieldset vem com borda e espaçamento do navegador; zeramos para usar o nosso estilo */
+.sintomas {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.sintoma {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  background: var(--card);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.sintoma:hover {
+  border-color: var(--vinho);
+}
+
+/* accent-color pinta a caixinha de marcar com a cor da marca */
+.sintoma input {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  margin: 2px 0 0;
+  accent-color: var(--vinho);
+  cursor: pointer;
+}
+
+/* :has() = "o cartão que tem uma caixinha marcada dentro" fica vinho */
+.sintoma:has(input:checked) {
+  border-color: var(--vinho);
+  background: var(--vinho-suave);
+}
+
+/* sticky: no computador, o resultado acompanha a rolagem enquanto a pessoa marca as opções */
+.resultado {
+  position: sticky;
+  top: 150px;
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  background:
+    radial-gradient(400px circle at 100% 0%, var(--brilho), transparent 60%),
+    linear-gradient(135deg, var(--card) 0%, var(--bg-alt) 100%);
+}
+
+.resultado h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.resumo {
+  margin: 0;
+  font-size: 15px;
+  color: var(--texto-suave);
+}
+
+.linhas-res {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.linha-res {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--borda);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.selo {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.selo-ok { background: var(--ok-bg); color: var(--ok-texto); }
+.selo-atencao { background: var(--atencao-bg); color: var(--atencao-texto); }
+.selo-prioridade { background: var(--vinho-suave); color: var(--vinho-suave-texto); }
+
+/* Tablet e celular: resultado embaixo das opções, sem acompanhar a rolagem */
+@media (max-width: 960px) {
+  .diag {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .resultado {
+    position: static;
   }
 }

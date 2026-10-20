@@ -73,3 +73,65 @@ if (abas.length && 'IntersectionObserver' in window) {
     }
   });
 }
+
+// Diagnóstico rápido.
+// Conta quantos itens foram marcados em cada frente e mostra um selo:
+// nenhum = "Sem sinais", um = "Atenção", dois = "Prioridade".
+// Também monta o link do WhatsApp com os itens marcados.
+const caixasDiagnostico = document.querySelectorAll('.sintoma input');
+const resumoDiagnostico = document.getElementById('resumo');
+const linhasResultado = document.querySelectorAll('.linha-res');
+const botaoEnviarDiagnostico = document.getElementById('enviar-diagnostico');
+
+function atualizarDiagnostico() {
+  const contagem = {};
+  const marcados = [];
+
+  caixasDiagnostico.forEach(function (caixa) {
+    if (caixa.checked) {
+      const frente = caixa.dataset.frente;
+      contagem[frente] = (contagem[frente] || 0) + 1;
+      // O texto do item está no <span> logo depois da caixinha
+      marcados.push(caixa.nextElementSibling.textContent);
+    }
+  });
+
+  if (marcados.length === 0) {
+    resumoDiagnostico.textContent = 'Nenhum ponto marcado. Marque o que acontece no seu condomínio.';
+  } else if (marcados.length === 1) {
+    resumoDiagnostico.textContent = '1 ponto marcado. Veja onde agir primeiro:';
+  } else {
+    resumoDiagnostico.textContent = marcados.length + ' pontos marcados. Veja onde agir primeiro:';
+  }
+
+  linhasResultado.forEach(function (linha) {
+    const quantidade = contagem[linha.dataset.frente] || 0;
+    const selo = linha.querySelector('.selo');
+    if (quantidade === 0) {
+      selo.className = 'selo selo-ok';
+      selo.textContent = 'Sem sinais';
+    } else if (quantidade === 1) {
+      selo.className = 'selo selo-atencao';
+      selo.textContent = 'Atenção';
+    } else {
+      selo.className = 'selo selo-prioridade';
+      selo.textContent = 'Prioridade';
+    }
+  });
+
+  // Mensagem do WhatsApp. "\n" é quebra de linha.
+  let mensagem = 'Olá! Fiz o diagnóstico no site da Guedes de Azevedo e gostaria de conversar sobre a gestão do meu condomínio.';
+  if (marcados.length > 0) {
+    mensagem += '\n\nPontos que preocupam:\n- ' + marcados.join('\n- ');
+  }
+  // encodeURIComponent faz automaticamente o que fizemos à mão no botão do topo:
+  // troca espaço por %20, "á" por %C3%A1, quebra de linha por %0A...
+  botaoEnviarDiagnostico.href = 'https://wa.me/5514998940464?text=' + encodeURIComponent(mensagem);
+}
+
+if (botaoEnviarDiagnostico) {
+  caixasDiagnostico.forEach(function (caixa) {
+    caixa.addEventListener('change', atualizarDiagnostico);
+  });
+  atualizarDiagnostico();
+}

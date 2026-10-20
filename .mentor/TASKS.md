@@ -9,8 +9,8 @@ Atualizado em: 2026-10-20
 
 ## Agora
 
-- [ ] Abas em pílulas + WhatsApp flutuante (Etapa 13)
-  - Pronto quando: a aba da seção na tela fica destacada ao rolar; o botão verde abre o WhatsApp
+- [ ] Diagnóstico rápido (Etapa 14)
+  - Pronto quando: marcar itens muda os selos e o botão abre o WhatsApp com os pontos marcados
 
 ---
 
@@ -58,6 +58,7 @@ Atualizado em: 2026-10-20
 
 | Data | Tarefa | Commit |
 |---|---|---|
+| 2026-10-20 | abas em pílulas e WhatsApp flutuante | feat: abas em pílulas |
 | 2026-10-20 | logo original e cinco frentes em cartões | feat: logo original e cinco frentes |
 | 2026-10-20 | barra de navegação fixa | feat: barra de navegação |
 | 2026-10-20 | topo em duas colunas com prédios animados | feat: topo em duas colunas |

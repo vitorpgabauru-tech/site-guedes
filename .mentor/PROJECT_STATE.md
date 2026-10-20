@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 13)
+Atualizado em: 2026-10-20 (Etapa 14)
 
 ---
 
@@ -44,9 +44,9 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: Etapa 12, logo original e cinco frentes em cartões
-Em revisão: Etapa 13, abas em pílulas com a seção atual destacada + WhatsApp flutuante com balão
-Próxima etapa: diagnóstico "Como está o seu condomínio hoje?" (protótipo), que leva os pontos marcados para a mensagem
+Última etapa concluída: Etapa 13, abas em pílulas + WhatsApp flutuante
+Em revisão: Etapa 14, diagnóstico rápido (#diagnostico) e botões "Fazer o diagnóstico" / WhatsApp no topo
+Próxima etapa: formulário de orçamento (#orcamento) em etapas, que também recebe os pontos do diagnóstico
 Observação: o menu da barra virou as abas em pílulas; ao criar uma seção nova, acrescentar a aba dela
 Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram
 
@@ -56,6 +56,8 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
 - topo com texto do protótipo, prédios animados, botão de WhatsApp (14) 99894-0464, slogan, curva vinho e faixa de valores
 - barra fixa com logo, sol/lua, Pedir orçamento e abas em pílulas (seção atual destacada)
 - WhatsApp flutuante com balão (balão só no computador)
+- seção #diagnostico: 10 situações para marcar, resultado por frente (sem sinais / atenção / prioridade)
+  e botão que envia os pontos marcados pelo WhatsApp
 - seção #gestao: cinco frentes em cartões <details> (um aberto por vez), com brilho que segue o mouse
 - demais seções só com título
 - código no GitHub

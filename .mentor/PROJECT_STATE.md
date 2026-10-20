@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 12)
+Atualizado em: 2026-10-20 (Etapa 13)
 
 ---
 
@@ -44,15 +44,18 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 ## Onde estamos
 
 Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: Etapa 11, logo original
-Em revisão: Etapa 12, cinco frentes em cartões que abrem (estilo gorgonoid, ver ADR-005)
-Próxima etapa: barra de abas em pílulas grudada no alto + botão flutuante de WhatsApp com balão
+Última etapa concluída: Etapa 12, logo original e cinco frentes em cartões
+Em revisão: Etapa 13, abas em pílulas com a seção atual destacada + WhatsApp flutuante com balão
+Próxima etapa: diagnóstico "Como está o seu condomínio hoje?" (protótipo), que leva os pontos marcados para a mensagem
+Observação: o menu da barra virou as abas em pílulas; ao criar uma seção nova, acrescentar a aba dela
 Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram
 
 ## Já funciona
 
 - cores do protótipo com modo escuro padrão e modo claro (botão sol/lua, escolha salva no localStorage)
 - topo com texto do protótipo, prédios animados, botão de WhatsApp (14) 99894-0464, slogan, curva vinho e faixa de valores
+- barra fixa com logo, sol/lua, Pedir orçamento e abas em pílulas (seção atual destacada)
+- WhatsApp flutuante com balão (balão só no computador)
 - seção #gestao: cinco frentes em cartões <details> (um aberto por vez), com brilho que segue o mouse
 - demais seções só com título
 - código no GitHub

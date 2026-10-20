@@ -36,3 +36,40 @@ document.querySelectorAll('.cartao').forEach(function (cartao) {
     cartao.style.setProperty('--my', (evento.clientY - caixa.top) + 'px');
   });
 });
+
+// Abas em pílulas: destaca a aba da seção que está no meio da tela.
+// O IntersectionObserver "vigia" as seções e avisa quando uma delas entra na faixa do meio da tela
+// (rootMargin corta 45% de cima e 50% de baixo, sobrando uma faixa estreita no centro).
+const abas = document.querySelectorAll('.aba');
+const faixaAbas = document.querySelector('.abas');
+
+function marcarAba(idSecao) {
+  abas.forEach(function (aba) {
+    const ativa = aba.getAttribute('href') === '#' + idSecao;
+    aba.classList.toggle('ativa', ativa);
+    if (ativa) {
+      aba.setAttribute('aria-current', 'true');
+      // No celular as abas rolam para o lado: centraliza a aba ativa dentro da faixa
+      faixaAbas.scrollTo({ left: aba.offsetLeft - (faixaAbas.clientWidth - aba.offsetWidth) / 2, behavior: 'smooth' });
+    } else {
+      aba.removeAttribute('aria-current');
+    }
+  });
+}
+
+if (abas.length && 'IntersectionObserver' in window) {
+  const vigia = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (entrada) {
+      if (entrada.isIntersecting) {
+        marcarAba(entrada.target.id);
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+
+  abas.forEach(function (aba) {
+    const secao = document.querySelector(aba.getAttribute('href'));
+    if (secao) {
+      vigia.observe(secao);
+    }
+  });
+}

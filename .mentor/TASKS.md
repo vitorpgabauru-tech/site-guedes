@@ -9,8 +9,8 @@ Atualizado em: 2026-10-20
 
 ## Agora
 
-- [ ] Cinco frentes em cartões que abrem (Etapa 12)
-  - Pronto quando: cada cartão abre e fecha, só um fica aberto, funciona no celular e nos dois modos
+- [ ] Abas em pílulas + WhatsApp flutuante (Etapa 13)
+  - Pronto quando: a aba da seção na tela fica destacada ao rolar; o botão verde abre o WhatsApp
 
 ---
 
@@ -58,7 +58,7 @@ Atualizado em: 2026-10-20
 
 | Data | Tarefa | Commit |
 |---|---|---|
-| 2026-10-20 | logo original da empresa | feat: logo original |
+| 2026-10-20 | logo original e cinco frentes em cartões | feat: logo original e cinco frentes |
 | 2026-10-20 | barra de navegação fixa | feat: barra de navegação |
 | 2026-10-20 | topo em duas colunas com prédios animados | feat: topo em duas colunas |
 | 2026-10-20 | topo com texto do protótipo, curva vinho e faixa de valores | 384524b |

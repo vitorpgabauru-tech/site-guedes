@@ -26,11 +26,6 @@
           <img class="logo-nome so-claro" src="img/logo-nome-modo-claro.png" alt="" width="242" height="34">
         </span>
       </a>
-      <ul class="menu">
-        <li><a href="#gestao">Nossa gestão</a></li>
-        <li><a href="#exemplos">Exemplos</a></li>
-        <li><a href="#quem-somos">Equipe</a></li>
-      </ul>
       <div class="nav-acoes">
         <button class="modo" id="modo" type="button" aria-label="Mudar para o modo claro">
           <svg class="ic-sol" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
@@ -38,6 +33,15 @@
         </button>
         <a class="botao botao-pequeno" href="#orcamento">Pedir orçamento</a>
       </div>
+    </div>
+    <!-- Abas em "pílulas": atalhos para as seções. A aba da seção que está na tela fica destacada (js/site.js) -->
+    <div class="abas-faixa">
+      <ul class="abas">
+        <li><a class="aba" href="#gestao">Nossa gestão</a></li>
+        <li><a class="aba" href="#exemplos">Exemplos</a></li>
+        <li><a class="aba" href="#quem-somos">Equipe</a></li>
+        <li><a class="aba" href="#orcamento">Orçamento</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -263,6 +267,12 @@
   <footer>
     <p>Guedes de Azevedo Síndico Profissional · Bauru/SP</p>
   </footer>
+
+  <!-- Botão flutuante de WhatsApp: fica sempre no canto da tela. O balão aparece depois de alguns segundos -->
+  <a class="zap-flutua" href="https://wa.me/5514998940464?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20s%C3%ADndico%20profissional." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <span class="zap-balao" aria-hidden="true">Quer saber como seria a gestão do seu condomínio? Fale com a gente</span>
+    <span class="zap-botao"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.5 3.9 1.7.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></span>
+  </a>
 
 <script src="js/site.js"></script></body>
 </html>

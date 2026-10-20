@@ -55,10 +55,10 @@
 }
 
 /* Rolagem suave ao clicar no menu. O scroll-padding-top desconta a altura da barra fixa,
-   senão o título da seção ficaria escondido atrás dela */
+   (logo + abas), senão o título da seção ficaria escondido atrás dela */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 140px;
 }
 
 /* Garante que o atributo hidden sempre esconda, mesmo que outra regra diga display: flex */
@@ -398,26 +398,6 @@ header .slogan {
   display: none;
 }
 
-.menu {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.menu a {
-  color: var(--texto-suave);
-  text-decoration: none;
-}
-
-.menu a:hover {
-  color: var(--vinho-texto);
-}
-
 .nav-acoes {
   display: flex;
   align-items: center;
@@ -427,13 +407,6 @@ header .slogan {
 .botao-pequeno {
   padding: 10px 16px;
   font-size: 14px;
-}
-
-/* Tablet e celular: o menu some (as seções continuam acessíveis rolando a página) */
-@media (max-width: 960px) {
-  .menu {
-    display: none;
-  }
 }
 
 /* Celular: nome do logo um pouco menor */
@@ -636,5 +609,137 @@ header .slogan {
   .cartao-colunas {
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
+  }
+}
+
+/* ---------- Abas em pílulas (segunda linha da barra) ---------- */
+.abas-faixa {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px 10px;
+}
+
+/* overflow-x: auto deixa as abas rolarem para o lado no celular, quando não cabem */
+.abas {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  background: var(--card);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.abas::-webkit-scrollbar {
+  display: none;
+}
+
+.aba {
+  display: block;
+  white-space: nowrap;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--texto-suave);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.aba:hover {
+  color: var(--texto);
+}
+
+/* Aba da seção que está na tela (a classe "ativa" é colocada pelo js/site.js) */
+.aba.ativa {
+  background: var(--vinho-suave);
+  color: var(--vinho-suave-texto);
+}
+
+/* ---------- WhatsApp flutuante ---------- */
+/* position: fixed prende o botão na tela (não na página): ele fica no canto mesmo rolando */
+.zap-flutua {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.zap-botao {
+  width: 58px;
+  height: 58px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s;
+}
+
+.zap-botao svg {
+  width: 30px;
+  height: 30px;
+}
+
+.zap-flutua:hover .zap-botao {
+  transform: scale(1.08);
+}
+
+.zap-flutua:focus-visible {
+  outline: none;
+}
+
+.zap-flutua:focus-visible .zap-botao {
+  outline: 3px solid var(--vinho-texto);
+  outline-offset: 3px;
+}
+
+/* Balão: começa invisível e aparece depois de 3 segundos (animation-delay) */
+.zap-balao {
+  max-width: 250px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--borda);
+  background: var(--card);
+  color: var(--texto);
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+  box-shadow: 0 6px 20px var(--sombra);
+  opacity: 0;
+  animation: aparece 0.4s ease 3s forwards;
+}
+
+@keyframes aparece {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Celular: só o botão redondo, para o balão não cobrir o conteúdo,
+   e um espaço extra no rodapé para o botão não ficar em cima do texto */
+@media (max-width: 560px) {
+  .zap-balao {
+    display: none;
+  }
+
+  footer {
+    padding-bottom: 96px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zap-balao {
+    animation: none;
+    opacity: 1;
   }
 }

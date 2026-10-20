@@ -9,8 +9,18 @@ Atualizado em: 2026-10-20
 
 ## Agora
 
-- [ ] Construtoras + vistoria interativa + prédios sólidos (Etapas 18 e 19)
-  - Pronto quando: pontos mostram a ficha certa; prédios sem partes transparentes
+- [ ] Revisão final (Etapa 20)
+  - Pronto quando: Vitor confirmar as afirmações abaixo e o commit estiver feito
+
+## Afirmações do site que o Vitor precisa confirmar (vieram do protótipo)
+
+- "Desde 2016"
+- "Dois engenheiros civis" (Vitor e Arlindo)
+- "Balancetes auditados" / "revisado e auditado por contadora independente"
+- "Seguro de responsabilidade civil"
+- "Acompanhamento técnico e registro em software próprio"
+- "Resultados divulgados periodicamente no mural virtual do condomínio"
+- "No mínimo três orçamentos antes de cada compra"
 
 ---
 
@@ -58,6 +68,7 @@ Atualizado em: 2026-10-20
 
 | Data | Tarefa | Commit |
 |---|---|---|
+| 2026-10-20 | construtoras, vistoria interativa e prédios sólidos | feat: construtoras, vistoria |
 | 2026-10-20 | rodapé completo e Exemplos em espera | feat: rodapé completo |
 | 2026-10-20 | nova ordem, prédios em foto e equipe | feat: nova ordem das seções |
 | 2026-10-20 | orçamento em etapas | feat: orçamento em etapas |

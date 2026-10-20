@@ -3,7 +3,7 @@
 > Memória do projeto entre sessões. Cole este arquivo no início de uma conversa nova para
 > retomar de onde parou. Máximo uma página. Atualize ao fim de toda etapa concluída e testada.
 
-Atualizado em: 2026-10-20 (Etapa 19)
+Atualizado em: 2026-10-20 (Etapa 20)
 
 ---
 
@@ -28,6 +28,7 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 | Backend | nenhum no MVP |
 | Banco | nenhum |
 | Hospedagem | a definir (ver ADR-003) |
+| Fontes | Montserrat e Open Sans no próprio site (css/fontes, licença OFL) |
 | Repositório | https://github.com/vitorpgabauru-tech/site-guedes (privado, branch main) |
 
 ## Ambiente
@@ -43,11 +44,11 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 
 ## Onde estamos
 
-Marco atual: M2 — Conteúdo e visual
-Última etapa concluída: Etapa 17, rodapé completo e Exemplos em espera
-Em revisão: Etapa 18 (Construtoras) + Etapa 19: vistoria interativa (#vistoria, depois de Nossa gestão)
-e prédios do topo com janelas e varandas sólidas (recorte refeito)
-Próximas etapas: revisão final (textos, título/descrição, imagem de compartilhamento, celular real) → publicação
+Marco atual: M4 — Revisão final
+Última etapa concluída: Etapas 18 e 19 (construtoras, vistoria, prédios sólidos)
+Em revisão: Etapa 20, revisão final: fontes locais (css/fontes), ícones, Open Graph (img/compartilhar.jpg),
+dados para o Google (JSON-LD), descrição nova e correções de texto
+Próxima etapa: publicação (ver Marco 5 no ROADMAP), depois das pendências de TASKS.md
 Em espera: Exemplos do nosso trabalho (Vitor está reunindo 3 ou 4 casos: tipo, tamanho, cidade, problema, solução)
 Observação: o menu da barra virou as abas em pílulas; ao criar uma seção nova, acrescentar a aba dela
 Observação: os links do menu apontam para as seções atuais e mudam conforme as seções do protótipo entram

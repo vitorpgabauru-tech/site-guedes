@@ -5,10 +5,52 @@
   <!-- Sem esta linha o celular mostra a página como se fosse um computador em miniatura (o problema do site atual) -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Síndico Profissional em Bauru e Marília | Guedes de Azevedo</title>
-  <meta name="description" content="Síndico profissional com engenharia civil: implantação de condomínios, gestão, assembleias e vistorias em Bauru e Marília.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Gestão completa de condomínios em Bauru e Marília: contas claras, segurança, regras cumpridas e manutenção acompanhada por engenheiros civis. Faça o diagnóstico e peça um orçamento.">
+  <!-- Cor da barra do navegador no celular -->
+  <meta name="theme-color" content="#121111">
+
+  <!-- Ícone da aba do navegador e do atalho na tela inicial do celular -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- Como o link aparece quando alguém compartilha no WhatsApp, Facebook, LinkedIn (Open Graph).
+       A imagem precisa de endereço completo: só funciona depois que o site estiver no ar -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Guedes de Azevedo Síndico Profissional">
+  <meta property="og:title" content="Guedes de Azevedo | Síndico profissional em Bauru e Marília">
+  <meta property="og:description" content="Gestão completa para o seu condomínio funcionar de verdade. Faça o diagnóstico gratuito e peça um orçamento.">
+  <meta property="og:url" content="https://sindico.guedesdeazevedo.com.br/">
+  <meta property="og:image" content="https://sindico.guedesdeazevedo.com.br/img/compartilhar.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Dados da empresa para o Google (aparecem em buscas e no mapa) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Guedes de Azevedo Síndico Profissional",
+    "description": "Síndico profissional e gestão completa de condomínios em Bauru e Marília.",
+    "url": "https://sindico.guedesdeazevedo.com.br/",
+    "image": "https://sindico.guedesdeazevedo.com.br/img/compartilhar.jpg",
+    "logo": "https://sindico.guedesdeazevedo.com.br/img/icone-512.png",
+    "telephone": "+55-14-3243-0464",
+    "email": "sindico@guedesdeazevedo.com.br",
+    "foundingDate": "2016",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Azarias Leite, 18-45, sala 1, Jardim Estoril",
+      "addressLocality": "Bauru",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "areaServed": ["Bauru", "Marília"]
+  }
+  </script>
+
+  <!-- As fontes agora ficam no próprio site (css/fontes), declaradas no estilo.css -->
   <link rel="stylesheet" href="css/estilo.css">
 <script>try { if (localStorage.getItem("modo") === "claro") document.documentElement.classList.add("claro"); } catch (e) {}</script></head>
 <body>
@@ -77,15 +119,15 @@
 
   <div class="valores" aria-label="Nossos valores">
     <div class="valor">
-      <h3>Profissionalismo</h3>
+      <p class="valor-titulo">Profissionalismo</p>
       <p>Rotina de gestão com prazos, registros e decisões técnicas tomadas por quem entende.</p>
     </div>
     <div class="valor">
-      <h3>Impessoalidade</h3>
+      <p class="valor-titulo">Impessoalidade</p>
       <p>As regras do condomínio valem para todos, aplicadas com critério e por escrito.</p>
     </div>
     <div class="valor">
-      <h3>Transparência</h3>
+      <p class="valor-titulo">Transparência</p>
       <p>Prestação de contas mensal que o morador entende, com cada despesa explicada.</p>
     </div>
   </div>
@@ -260,7 +302,7 @@
     <section id="vistoria">
       <p class="eyebrow">Manutenção com olhar de engenheiro</p>
       <h2>O que um engenheiro civil olha no seu condomínio</h2>
-      <p class="secao-intro">Toque nos pontos do prédio para ver o que verificamos em cada parte. Esse é o nosso diferencial na manutenção.</p>
+      <p class="secao-intro">Toque (ou clique) nos pontos do prédio para ver o que verificamos em cada parte. Esse é o nosso diferencial na manutenção.</p>
       <div class="vistoria">
         <div class="prancheta">
           <div class="planta">
@@ -351,7 +393,7 @@
             <li>Iluminação de emergência e sinalização</li>
             <li>AVCB do Corpo de Bombeiros válido</li>
           </ul>
-          <p class="porque"><strong>Por que importa:</strong> Sem AVCB válido o condomínio pode ter problema com o seguro e responde pelo risco aos moradores.</p>
+          <p class="porque"><strong>Por que importa:</strong> Sem AVCB válido, o condomínio pode ter problema com o seguro e responde pelo risco aos moradores.</p>
         </article>
         <article class="ficha" id="ponto-6">
           <p class="ficha-num">Ponto 6 de 6</p>
@@ -462,7 +504,7 @@
           <!-- Só aparece quando há itens marcados no diagnóstico -->
           <label class="incluir-diag" id="incluir-diag" hidden>
             <input type="checkbox" id="incluir-diag-caixa" checked>
-            <span>Incluir os <b id="qtd-diag">0</b> pontos marcados no diagnóstico</span>
+            <span id="texto-incluir-diag">Incluir os pontos marcados no diagnóstico</span>
           </label>
 
           <p class="erro" id="erro-orcamento" role="alert"></p>

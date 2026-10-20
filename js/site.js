@@ -152,7 +152,7 @@ if (formOrcamento) {
   const previa = document.getElementById('previa-orcamento');
   const avisoDiagnostico = document.getElementById('incluir-diag');
   const caixaDiagnostico = document.getElementById('incluir-diag-caixa');
-  const quantidadeDiagnostico = document.getElementById('qtd-diag');
+  const textoIncluirDiagnostico = document.getElementById('texto-incluir-diag');
   let passoAtual = 0;
 
   // Resposta de uma pergunta: a opção marcada (perfil) ou o texto digitado (demais)
@@ -200,7 +200,10 @@ if (formOrcamento) {
     botaoEnviar.href = 'https://wa.me/5514998940464?text=' + encodeURIComponent(mensagem);
     const pontos = pontosDoDiagnostico().length;
     avisoDiagnostico.hidden = pontos === 0;
-    quantidadeDiagnostico.textContent = pontos;
+    // Singular e plural certinhos: "o 1 ponto marcado" / "os 3 pontos marcados"
+    textoIncluirDiagnostico.textContent = pontos === 1
+      ? 'Incluir o 1 ponto marcado no diagnóstico'
+      : 'Incluir os ' + pontos + ' pontos marcados no diagnóstico';
   }
 
   function mostrarPasso(numero) {

@@ -1,3 +1,13 @@
+/* Fontes guardadas no próprio site (antes vinham do Google Fonts).
+   Vantagens: o site não depende de outro servidor e não envia o endereço do visitante ao Google.
+   font-display: swap mostra o texto na hora com a fonte do sistema e troca quando a fonte carrega. */
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 600; font-display: swap; src: url("fontes/montserrat-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 700; font-display: swap; src: url("fontes/montserrat-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-style: normal; font-weight: 800; font-display: swap; src: url("fontes/montserrat-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Montserrat"; font-style: italic; font-weight: 500; font-display: swap; src: url("fontes/montserrat-latin-500-italic.woff2") format("woff2"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("fontes/open-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("fontes/open-sans-latin-600-normal.woff2") format("woff2"); }
+
 /* Cores do site em dois modos. Padrão: escuro. A classe "claro" no <html> troca tudo para o modo claro.
    O resto do arquivo só usa os nomes (var(--bg), var(--texto)...), nunca o código da cor. */
 :root {
@@ -324,7 +334,11 @@ header .slogan {
   text-align: center;
 }
 
-.valor h3 {
+.valor-titulo {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
   font-size: 17px;
   letter-spacing: 1px;
   text-transform: uppercase;

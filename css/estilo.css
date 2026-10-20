@@ -59,14 +59,14 @@ h1, h2, h3 {
 }
 
 /* clamp(mínimo, ideal, máximo): o título cresce com a tela, mas nunca fica pequeno demais no celular nem enorme no monitor */
-h1 { font-size: clamp(28px, 6vw, 48px); }
+h1 { font-size: clamp(30px, 5vw, 48px); font-weight: 800; color: var(--vinho-texto); }
 h2 { font-size: clamp(24px, 4vw, 34px); color: var(--vinho-texto); }
 
 header {
-  background: var(--bg-alt);
-  border-bottom: 1px solid var(--borda);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+  overflow: hidden;
   text-align: center;
-  padding: 64px 20px;
+  padding: 64px 20px 170px;
 }
 
 /* Título com largura máxima: quebra em duas linhas equilibradas em vez de esticar de ponta a ponta */
@@ -205,4 +205,83 @@ header {
 .claro .ic-sol,
 :root:not(.claro) .ic-lua {
   display: none;
+}
+
+/* Frase de efeito do folder, abaixo do botão */
+header .slogan {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+/* Curva vinho no pé do topo: desenho SVG esticado na largura toda, encostado embaixo */
+.curva {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 150px;
+  display: block;
+}
+
+.curva path {
+  fill: var(--vinho);
+}
+
+/* Faixa vinho com os três valores, continuação da curva */
+.valores {
+  background: var(--vinho);
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 8px 20px 56px;
+}
+
+.valor {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 8px 24px;
+  text-align: center;
+}
+
+.valor h3 {
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.valor p {
+  font-size: 15px;
+  margin: 0;
+  opacity: 0.92;
+}
+
+/* Linha fina separando um valor do outro */
+.valor + .valor {
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Celular: curva mais baixa e valores um embaixo do outro */
+@media (max-width: 700px) {
+  header {
+    padding-bottom: 100px;
+  }
+
+  .curva {
+    height: 80px;
+  }
+
+  .valores {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .valor + .valor {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    padding-top: 20px;
+  }
 }

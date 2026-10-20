@@ -1,11 +1,35 @@
-/* Cores da marca num lugar só: para trocar uma cor no site inteiro, mude aqui */
+/* Cores do site em dois modos. Padrão: escuro. A classe "claro" no <html> troca tudo para o modo claro.
+   O resto do arquivo só usa os nomes (var(--bg), var(--texto)...), nunca o código da cor. */
 :root {
-  --vinho: #8E1B1B;
-  --vinho-escuro: #5E1414;
-  --grafite: #2B2B2B;
-  --fundo: #F7F5F2;
-  --branco: #FFFFFF;
+  --bg: #121111;
+  --bg-alt: #1A1818;
+  --card: #211F1F;
+  --borda: #34302F;
+  --texto: #EDEAE6;
+  --texto-suave: #A8A39E;
+  --vinho: #B3232A;
+  --vinho-escuro: #861418;
+  --vinho-texto: #F0787C;
+  --rodape: #5A0D10;
+  --sombra: rgba(0, 0, 0, 0.35);
   --largura-max: 1100px;
+  /* Avisa o navegador do modo, para barras de rolagem e campos de formulário combinarem */
+  color-scheme: dark;
+}
+
+:root.claro {
+  --bg: #FFFFFF;
+  --bg-alt: #F6F5F3;
+  --card: #FFFFFF;
+  --borda: #E4E2DF;
+  --texto: #2B2B2B;
+  --texto-suave: #5E5E5E;
+  --vinho: #A3191E;
+  --vinho-escuro: #6E1013;
+  --vinho-texto: #A3191E;
+  --rodape: #6E1013;
+  --sombra: rgba(0, 0, 0, 0.06);
+  color-scheme: light;
 }
 
 /* Faz a largura incluir o espaçamento interno; evita conteúdo vazando para fora da tela */
@@ -13,13 +37,19 @@
   box-sizing: border-box;
 }
 
+/* Garante que o atributo hidden sempre esconda, mesmo que outra regra diga display: flex */
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 1.6;
-  color: var(--grafite);
-  background: var(--fundo);
+  color: var(--texto);
+  background: var(--bg);
+  transition: background 0.3s, color 0.3s;
 }
 
 h1, h2, h3 {
@@ -30,46 +60,33 @@ h1, h2, h3 {
 
 /* clamp(mínimo, ideal, máximo): o título cresce com a tela, mas nunca fica pequeno demais no celular nem enorme no monitor */
 h1 { font-size: clamp(28px, 6vw, 48px); }
-h2 { font-size: clamp(24px, 4vw, 34px); color: var(--vinho); }
+h2 { font-size: clamp(24px, 4vw, 34px); color: var(--vinho-texto); }
 
 header {
-  background: var(--grafite);
-  color: var(--branco);
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--borda);
   text-align: center;
   padding: 64px 20px;
+}
+
+/* Título com largura máxima: quebra em duas linhas equilibradas em vez de esticar de ponta a ponta */
+header h1 {
+  max-width: 900px;
+  margin: 0 auto 16px;
 }
 
 header p {
   font-size: 20px;
   margin: 0;
-  opacity: 0.85;
-}
-
-/* Limita a largura do texto em telas grandes e centraliza; o padding lateral protege as bordas no celular */
-section {
-  max-width: var(--largura-max);
-  margin: 0 auto;
-  padding: 56px 20px;
-}
-
-section + section {
-  border-top: 1px solid #E2DDD8;
-}
-
-footer {
-  background: var(--vinho-escuro);
-  color: var(--branco);
-  text-align: center;
-  font-size: 14px;
-  padding: 24px 20px;
 }
 
 header .marca {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 14px;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.7;
+  color: var(--vinho-texto);
   margin-bottom: 16px;
 }
 
@@ -77,12 +94,13 @@ header .marca {
 header .subtitulo {
   max-width: 640px;
   margin: 0 auto 32px;
+  color: var(--texto-suave);
 }
 
 .botao {
   display: inline-block;
   background: var(--vinho);
-  color: var(--branco);
+  color: #FFFFFF;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
   text-decoration: none;
@@ -97,25 +115,34 @@ header .subtitulo {
   background: var(--vinho-escuro);
 }
 
-/* Título com largura máxima: quebra em duas linhas equilibradas em vez de esticar de ponta a ponta */
-header h1 {
-  max-width: 900px;
-  margin: 0 auto 16px;
+/* Limita a largura do texto em telas grandes e centraliza; o padding lateral protege as bordas no celular */
+section {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+
+section + section {
+  border-top: 1px solid var(--borda);
 }
 
 .painel {
-  background: var(--branco);
+  background: var(--card);
+  border: 1px solid var(--borda);
   border-left: 5px solid var(--vinho);
   border-radius: 8px;
   padding: 28px 24px;
   margin-top: 24px;
-  /* Sombra bem leve: separa o cartão do fundo sem chamar atenção */
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px var(--sombra);
 }
 
 .painel h3 {
   font-size: 21px;
-  color: var(--grafite);
+  color: var(--texto);
+}
+
+.painel p {
+  color: var(--texto-suave);
 }
 
 .lista {
@@ -127,7 +154,15 @@ header h1 {
   margin-bottom: 8px;
 }
 
-/* ::marker é a bolinha da lista; aqui ela fica vinho em vez de preta */
+/* ::marker é a bolinha da lista */
 .lista li::marker {
-  color: var(--vinho);
+  color: var(--vinho-texto);
+}
+
+footer {
+  background: var(--rodape);
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 24px 20px;
 }

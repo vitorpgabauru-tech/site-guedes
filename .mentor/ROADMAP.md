@@ -51,9 +51,10 @@ Atualizado em: 2026-10-20
 Fecha quando: está no ar em sindico.guedesdeazevedo.com.br, com HTTPS, e o e-mail da empresa
 continua funcionando.
 
-- [ ] hospedagem decidida (ADR-003): irmão confirma se o plano da HostGator tem cPanel
-- [ ] backup do site antigo
-- [ ] enviar só os arquivos do site: index.html, css/, js/, img/ (não enviar .mentor/, prototipo/, README.md)
+- [x] hospedagem decidida (ADR-003): HostGator Plano M com cPanel, pasta public_html/sindico
+- [x] backup do site antigo (site-antigo-2026-10-20.zip)
+- [x] parte 1: site novo no ar (pacote site-novo-publicar.zip extraído em public_html/sindico, 2026-10-20)
+- [ ] parte 2: apagar WordPress e arquivos do site antigo (manter .well-known)
 - [ ] HTTPS ativo
 - [ ] e-mail testado depois da publicação (enviar e receber)
 - [ ] compartilhar o link no WhatsApp e conferir a prévia

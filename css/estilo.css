@@ -790,6 +790,14 @@ header .slogan {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  transition: opacity 0.3s, translate 0.3s;
+}
+
+/* Some enquanto o formulário de orçamento está na tela: lá ele cobriria o botão "Continuar" (js/site.js) */
+.zap-flutua.escondido {
+  opacity: 0;
+  translate: 0 20px;
+  pointer-events: none;
 }
 
 .zap-botao {
@@ -1117,6 +1125,19 @@ header .slogan {
   font-weight: 600;
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
+}
+
+/* min-width: 0 deixa o texto encolher dentro do cartão; overflow-wrap quebra palavra longa se precisar */
+.opcao span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Celular estreito: uma opção por linha, para os nomes caberem inteiros */
+@media (max-width: 480px) {
+  .opcoes {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .opcao input {

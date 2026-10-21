@@ -48,7 +48,8 @@ Marco atual: M5 — Publicação
 Última etapa concluída: Etapas 18 e 19 (construtoras, vistoria, prédios sólidos)
 Em revisão: Etapa 20, revisão final: fontes locais (css/fontes), ícones, Open Graph (img/compartilhar.jpg),
 dados para o Google (JSON-LD), descrição nova e correções de texto
-Próxima etapa: publicação (ver Marco 5 no ROADMAP), depois das pendências de TASKS.md
+No ar desde 2026-10-20 (parte 1 da publicação). Próxima etapa: parte 2 (limpeza do site antigo), HTTPS e teste de e-mail
+Para atualizar o site: refazer o site-novo-publicar.zip, subir em public_html/sindico e extrair por cima
 Ordem das seções (2026-10-20): Nossa gestão → Equipe → Vistoria → Diagnóstico → Orçamento → (Exemplos, escondida) → Construtoras
 Em espera: Exemplos do nosso trabalho (Vitor está reunindo 3 ou 4 casos: tipo, tamanho, cidade, problema, solução)
 Observação: o menu da barra virou as abas em pílulas; ao criar uma seção nova, acrescentar a aba dela

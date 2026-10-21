@@ -77,7 +77,7 @@ if (abas.length && 'IntersectionObserver' in window) {
 // Diagnóstico rápido.
 // Conta quantos itens foram marcados em cada frente e mostra um selo:
 // nenhum = "Sem sinais", um = "Atenção", dois = "Prioridade".
-// Também monta o link do WhatsApp com os itens marcados.
+// O botão "Continuar para o orçamento" leva às perguntas; lá os itens marcados entram na mensagem.
 const caixasDiagnostico = document.querySelectorAll('.sintoma input');
 const resumoDiagnostico = document.getElementById('resumo');
 const linhasResultado = document.querySelectorAll('.linha-res');
@@ -118,15 +118,6 @@ function atualizarDiagnostico() {
       selo.textContent = 'Prioridade';
     }
   });
-
-  // Mensagem do WhatsApp. "\n" é quebra de linha.
-  let mensagem = 'Olá! Fiz o diagnóstico no site da Guedes de Azevedo e gostaria de conversar sobre a gestão do meu condomínio.';
-  if (marcados.length > 0) {
-    mensagem += '\n\nPontos que preocupam:\n- ' + marcados.join('\n- ');
-  }
-  // encodeURIComponent faz automaticamente o que fizemos à mão no botão do topo:
-  // troca espaço por %20, "á" por %C3%A1, quebra de linha por %0A...
-  botaoEnviarDiagnostico.href = 'https://wa.me/5514998940464?text=' + encodeURIComponent(mensagem);
 }
 
 if (botaoEnviarDiagnostico) {
@@ -134,6 +125,16 @@ if (botaoEnviarDiagnostico) {
     caixa.addEventListener('change', atualizarDiagnostico);
   });
   atualizarDiagnostico();
+
+  // Ao seguir para o orçamento, garante que a opção "incluir os pontos do diagnóstico" está marcada
+  // (a pessoa pode ter desmarcado antes). O "input" avisa a prévia da mensagem para se atualizar.
+  botaoEnviarDiagnostico.addEventListener('click', function () {
+    const caixaIncluir = document.getElementById('incluir-diag-caixa');
+    if (caixaIncluir && !caixaIncluir.checked) {
+      caixaIncluir.checked = true;
+      caixaIncluir.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  });
 }
 
 // Orçamento em etapas.
@@ -328,4 +329,16 @@ if (pontosVistoria.length && navegacaoFicha) {
   });
 
   mostrarPonto(1);
+}
+
+// Botão flutuante do WhatsApp: esconde enquanto o formulário de orçamento aparece na tela,
+// para não cobrir o botão "Continuar". O IntersectionObserver avisa quando o formulário entra ou sai da tela.
+const zapFlutuante = document.querySelector('.zap-flutua');
+const formularioOrcamento = document.getElementById('form-orcamento');
+
+if (zapFlutuante && formularioOrcamento && 'IntersectionObserver' in window) {
+  const observadorZap = new IntersectionObserver(function (entradas) {
+    zapFlutuante.classList.toggle('escondido', entradas[0].isIntersecting);
+  });
+  observadorZap.observe(formularioOrcamento);
 }

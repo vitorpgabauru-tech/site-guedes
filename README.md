@@ -25,8 +25,24 @@ Teste o formulário num celular de verdade antes de publicar.
 
 ## Publicar
 
-A definir (ver .mentor/DECISIONS.md, ADR-003).
+Hospedagem: HostGator, Plano M, cPanel. O site fica em public_html/sindico.
 Regra fixa: nunca alterar os registros MX do domínio — eles controlam o e-mail da empresa.
+
+Para atualizar o site no ar:
+1. Se mudou css/estilo.css ou js/site.js, aumentar o "?v=" dos dois links no index.html.
+2. Montar o pacote site-novo-publicar.zip só com os arquivos do site: index.html, .htaccess, css/, js/, img/
+   (nunca .mentor/, .git/, README.md).
+3. cPanel > Gerenciador de Arquivos > public_html/sindico > Carregar o zip > botão direito > Extrair.
+4. Apagar o zip do servidor e testar numa aba anônima (computador e celular).
+
+## Voltar atrás (plano de reversão)
+
+| O que deu errado | O que fazer |
+|---|---|
+| Uma atualização quebrou o site | Pegar a versão anterior no Git (pedir ajuda antes de rodar comando de reversão), montar o zip e extrair por cima |
+| Um arquivo foi apagado por engano no servidor | cPanel > Gerenciador de Arquivos > Exibir Lixeira > Restaurar |
+| Precisa do site antigo inteiro | Backup site-antigo-2026-10-20.zip (guardado pelo Vitor): subir em public_html/sindico e extrair |
+| E-mail parou | Não é o site: conferir no cPanel > Zone Editor se os registros MX continuam apontando para mail.guedesdeazevedo.com.br |
 
 ## Estrutura de pastas
 

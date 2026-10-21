@@ -3,14 +3,14 @@
 > Uma tarefa = uma sessão de trabalho, um objetivo verificável, um commit.
 > Concluída significa: testada no navegador e commitada.
 
-Atualizado em: 2026-10-20
+Atualizado em: 2026-10-21
 
 ---
 
 ## Agora
 
-- [ ] Revisão final (Etapa 20)
-  - Pronto quando: Vitor confirmar as afirmações abaixo e o commit estiver feito
+- [ ] Fotos de Arlindo e Flavia na seção Equipe
+  - Pronto quando: as duas fotos substituem as letras A e F, no mesmo enquadramento das outras
 
 ## Imagens do topo
 
@@ -35,10 +35,11 @@ Atualizado em: 2026-10-20
 
 | # | Tarefa | Pronto quando | Marco |
 |---|---|---|---|
-| 1 | Deixar o layout responsivo | nada vaza nem fica cortado no modo celular | 2 |
-| 2 | Seção de exemplos de trabalho (cartões sem nomes) | 3 a 4 exemplos revisados | 2 |
-| 3 | Seção quem somos | texto e credenciais revisados | 2 |
-| 5 | Título, descrição e alt das imagens | checklist do Marco 4 ok | 4 |
+| 1 | Seção Exemplos do nosso trabalho (cartões sem nomes; mostrar a seção e a aba) | 3 a 4 exemplos revisados | conteúdo |
+| 2 | Esvaziar a lixeira do cPanel | depois de ~2026-10-27, se nada fez falta | manutenção |
+| 3 | Decidir o banco de dados do WordPress (backup e apagar, ou manter) | decisão registrada em DECISIONS.md | manutenção |
+| 4 | Aviso por e-mail a cada pedido de orçamento | v2 | v2 |
+| 5 | Perguntas frequentes (FAQ) | v2 | v2 |
 
 ---
 
@@ -46,7 +47,7 @@ Atualizado em: 2026-10-20
 
 | O quê | Com quem |
 |---|---|
-| Fotos de Arlindo, Bruno e Flavia (Vitor e Silvia já estão no site) | Vitor |
+| Fotos de Arlindo e Flavia (Vitor, Bruno e Silvia já estão no site) | Vitor |
 | Fotos reais de condomínios atendidos (sem placas ou nomes) | Vitor |
 | Reunir 3 ou 4 exemplos de trabalho (sem nome de condomínio) | Vitor |
 

@@ -44,11 +44,11 @@ Tamanho: M (site estático, sem login e sem banco de dados).
 
 ## Onde estamos
 
-Marco atual: M5 — Publicação
+Marco atual: M5 — Publicação concluído em 2026-10-21. Próximo: conteúdo que falta (TASKS.md)
 Última etapa concluída: Etapas 18 e 19 (construtoras, vistoria, prédios sólidos)
 Em revisão: Etapa 20, revisão final: fontes locais (css/fontes), ícones, Open Graph (img/compartilhar.jpg),
 dados para o Google (JSON-LD), descrição nova e correções de texto
-No ar desde 2026-10-20 (parte 1 da publicação). Próxima etapa: parte 2 (limpeza do site antigo), HTTPS e teste de e-mail
+No ar desde 2026-10-20 em https://sindico.guedesdeazevedo.com.br, sem o site antigo; e-mail e prévia no WhatsApp testados
 Para atualizar o site: refazer o site-novo-publicar.zip, subir em public_html/sindico e extrair por cima
 Ao mudar css/estilo.css ou js/site.js: aumentar o "?v=" dos dois links no index.html (o navegador guarda CSS e JS por 1 dia)
 Ordem das seções (2026-10-20): Nossa gestão → Equipe → Vistoria → Diagnóstico → Orçamento → (Exemplos, escondida) → Construtoras
@@ -91,13 +91,10 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
 
 ## Problemas conhecidos
 
-- A pasta /public_html/sindico tem, além do site antigo do construtor, um WordPress abandonado desde 2016
-  (tema de casamento, WooCommerce, LayerSlider, Revolution Slider) recebendo acessos e gerando erros
-  (error_log de 12 MB). É uma porta de entrada para ataques: sai na publicação.
-- Há um backup antigo, bkp(15.05.17).zip (72 MB), dentro da pasta pública: qualquer pessoa que souber o nome
-  pode baixá-lo. Sai na publicação.
-- Backup completo do site antigo feito em 2026-10-20 (site-antigo-2026-10-20.zip, no computador do Vitor).
-- O .htaccess antigo manda celulares para index_mobile.html; o site novo traz um .htaccess próprio.
+- Resolvido em 2026-10-20: WordPress abandonado, bkp(15.05.17).zip, error_log e o zip de backup que estava na
+  pasta pública foram apagados. Arquivos do WordPress ficam na lixeira do cPanel até ~2026-10-27; depois, esvaziar.
+- Backup completo do site antigo: site-antigo-2026-10-20.zip, só no computador do Vitor (nunca na pasta pública).
+- O banco de dados do WordPress continua na HostGator, sem uso: decidir se apaga (fazer backup antes).
 
 ## Contexto que o mentor precisa saber
 

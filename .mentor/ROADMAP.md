@@ -47,17 +47,17 @@ Atualizado em: 2026-10-20
 - [ ] imagens de prédios licenciadas
 - [ ] teste num celular de verdade (depois de publicado)
 
-### Marco 5 — Publicação
+### Marco 5 — Publicação (concluído em 2026-10-21)
 Fecha quando: está no ar em sindico.guedesdeazevedo.com.br, com HTTPS, e o e-mail da empresa
 continua funcionando.
 
 - [x] hospedagem decidida (ADR-003): HostGator Plano M com cPanel, pasta public_html/sindico
 - [x] backup do site antigo (site-antigo-2026-10-20.zip)
 - [x] parte 1: site novo no ar (pacote site-novo-publicar.zip extraído em public_html/sindico, 2026-10-20)
-- [ ] parte 2: apagar WordPress e arquivos do site antigo (manter .well-known)
+- [x] parte 2: WordPress, arquivos do site antigo e backups públicos apagados (2026-10-20; .well-known mantida)
 - [x] HTTPS ativo (redirecionamento no .htaccess, também tira o www; o botão do cPanel não liga)
-- [ ] e-mail testado depois da publicação (enviar e receber)
-- [ ] compartilhar o link no WhatsApp e conferir a prévia
+- [x] e-mail testado depois da publicação (enviar e receber) — ok em 2026-10-21
+- [x] compartilhar o link no WhatsApp e conferir a prévia — ok em 2026-10-21
 - [x] plano de reversão escrito (README.md)
 
 ---

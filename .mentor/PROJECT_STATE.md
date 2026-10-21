@@ -60,7 +60,7 @@ Observação: os links do menu apontam para as seções atuais e mudam conforme 
 - topo com texto do protótipo, prédios animados, botão de WhatsApp (14) 99894-0464, slogan, curva vinho e faixa de valores
 - barra fixa com logo, sol/lua, Pedir orçamento e abas em pílulas (seção atual destacada)
 - WhatsApp flutuante com balão (balão só no computador)
-- topo: 5 prédios em foto (img/predio-1..5.webp, fundo recortado de _fotos_tmp) sobem ao abrir e se mexem com o mouse
+- topo: 5 prédios em foto (img/predio-1..5.webp, renders autorizados, fundo recortado de _fotos_tmp) sobem ao abrir e se mexem com o mouse
 - seção #vistoria: prédio em corte com 6 pontos clicáveis e ficha de cada um (anterior/próximo)
 - seção #construtoras: checklist da implantação; botão leva ao orçamento com "Construtora" marcado
 - seção #quem-somos: equipe com credenciais e 5 cartões

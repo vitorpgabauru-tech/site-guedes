@@ -12,7 +12,14 @@ Atualizado em: 2026-10-20
 - [ ] Revisão final (Etapa 20)
   - Pronto quando: Vitor confirmar as afirmações abaixo e o commit estiver feito
 
-## Afirmações do site que o Vitor precisa confirmar (vieram do protótipo)
+## Imagens do topo
+
+- Prédios do topo (img/predio-1..5.webp): imagens PNG transparentes de banco de imagens, compradas
+  (licenciadas) pelo Vitor em 2026-10-20; originais em site-guedes/_fotos_tmp. Composição da primeira
+  versão do topo. Os renders de construtoras foram descartados. A 6ª imagem comprada
+  (Edificio_Moderno_PNG_Transparente.png) ficou de reserva.
+
+## Afirmações do site (confirmadas pelo Vitor em 2026-10-20)
 
 - "Desde 2016"
 - "Dois engenheiros civis" (Vitor e Arlindo)
@@ -40,7 +47,6 @@ Atualizado em: 2026-10-20
 | O quê | Com quem |
 |---|---|
 | Fotos de Arlindo, Bruno e Flavia (Vitor e Silvia já estão no site) | Vitor |
-| Imagens de prédios: são prévias com marca d'água de banco de imagens. Baixar as versões licenciadas (PNG transparente) antes de publicar; o recorte é refeito em minutos | Vitor |
 | Fotos reais de condomínios atendidos (sem placas ou nomes) | Vitor |
 | Reunir 3 ou 4 exemplos de trabalho (sem nome de condomínio) | Vitor |
 

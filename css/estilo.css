@@ -20,6 +20,8 @@
   --vinho: #B3232A;
   --vinho-escuro: #861418;
   --vinho-texto: #F0787C;
+  /* Cor do título do topo (branco no modo escuro) */
+  --titulo-cor: #FFFFFF;
   --rodape: #5A0D10;
   --sombra: rgba(0, 0, 0, 0.35);
   /* Prédios do topo um pouco mais escuros à noite, para combinar com o fundo */
@@ -51,6 +53,7 @@
   --vinho: #A3191E;
   --vinho-escuro: #6E1013;
   --vinho-texto: #A3191E;
+  --titulo-cor: #A3191E;
   --rodape: #6E1013;
   --sombra: rgba(0, 0, 0, 0.06);
   --predio-filtro: brightness(1);
@@ -111,6 +114,7 @@ header {
 
 /* Título com largura máxima: quebra em duas linhas equilibradas em vez de esticar de ponta a ponta */
 header h1 {
+  color: var(--titulo-cor);
   margin: 0 0 16px;
 }
 
@@ -394,6 +398,13 @@ header .slogan {
   position: relative;
   width: 100%;
   aspect-ratio: 520 / 470;
+  /* Prédios na frente da curva vermelha (a curva vem depois no HTML e, sem isto, ficaria por cima) */
+  z-index: 1;
+  /* 20% maiores, crescendo a partir da base, e um pouco para a direita para preencher o espaço.
+     O deslocamento em % é do próprio tamanho do palco, então acompanha a largura da tela. */
+  scale: 1.2;
+  transform-origin: 50% 100%;
+  translate: 6% 0;
 }
 
 /* Brilho vinho atrás dos prédios */
@@ -438,6 +449,9 @@ header .slogan {
   .skyline {
     max-width: 460px;
     margin: 0 auto;
+    /* Uma coluna só: os prédios ficam centralizados, no tamanho normal */
+    translate: none;
+    scale: none;
   }
 }
 

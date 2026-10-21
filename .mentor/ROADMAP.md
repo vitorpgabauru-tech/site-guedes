@@ -55,10 +55,10 @@ continua funcionando.
 - [x] backup do site antigo (site-antigo-2026-10-20.zip)
 - [x] parte 1: site novo no ar (pacote site-novo-publicar.zip extraído em public_html/sindico, 2026-10-20)
 - [ ] parte 2: apagar WordPress e arquivos do site antigo (manter .well-known)
-- [ ] HTTPS ativo
+- [x] HTTPS ativo (redirecionamento no .htaccess, também tira o www; o botão do cPanel não liga)
 - [ ] e-mail testado depois da publicação (enviar e receber)
 - [ ] compartilhar o link no WhatsApp e conferir a prévia
-- [ ] plano de reversão escrito
+- [x] plano de reversão escrito (README.md)
 
 ---
 
